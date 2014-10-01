@@ -1,6 +1,7 @@
 ﻿namespace SnakeUnMess
 {
     using System;
+    using System.Collections.Specialized;
     using System.Linq;
 
     public class GameHandler
@@ -14,7 +15,7 @@
         {
             var player = new Player(new Coordinate(10, 10));
             var gameOver = false;
-            var snakeDirection = Snake.MovementDirection.Right;
+            var snakeDirection = Direction.Right;
 
             var randomNumber = new Random();
             var foodItem = new FoodItem(
@@ -27,21 +28,22 @@
                 if (Console.KeyAvailable)
                 {
                     // TODO separate into inputHandler class
-                    var keyPressed = Console.ReadKey().KeyChar;
+                    var keyPressed = Console.ReadKey().Key;
                     Console.Write(keyPressed);
+
                     switch (keyPressed)
                     {
-                        case 'w':
-                            snakeDirection = Snake.MovementDirection.Up;
+                        case ConsoleKey.W:
+                            snakeDirection = Direction.Up;
                             break;
-                        case 'a':
-                            snakeDirection = Snake.MovementDirection.Left;
+                        case ConsoleKey.A:
+                            snakeDirection = Direction.Left;
                             break;
-                        case 's':
-                            snakeDirection = Snake.MovementDirection.Down;
+                        case ConsoleKey.S:
+                            snakeDirection = Direction.Down;
                             break;
-                        case 'd':
-                            snakeDirection = Snake.MovementDirection.Right;
+                        case ConsoleKey.D:
+                            snakeDirection = Direction.Right;
                             break;
                     }
                 }
@@ -50,15 +52,17 @@
                 player.MoveSnake(snakeDirection);
 
                 // If player touches the edges of the console window..
-                gameOver = PlayerCollided(player.PlayerSnake.Position);                
+                gameOver = PlayerCollided(player.Snake.Position);                
 
                 // If self was eaten, ..
                 if (!gameOver)
                 {
-                    for (var i = 0; i < player.PlayerSnake.BodyPartList.Count - 1; i++)
+                    for (var i = 0; i < player.Snake.BodyPartList.Count - 1; i++)
                     {
-                        if (player.PlayerSnake.Position.X == player.PlayerSnake.BodyPartList[i].PartCoordinate.X
-                            && player.PlayerSnake.Position.Y == player.PlayerSnake.BodyPartList[i].PartCoordinate.Y)
+                        var bodyPart = player.Snake.BodyPartList[i];
+
+                        if (player.Snake.Position.X == bodyPart.PartCoordinate.X
+                            && player.Snake.Position.Y == bodyPart.PartCoordinate.Y)
                         {
                             gameOver = true;
                             break;
@@ -66,17 +70,17 @@
                     }
 
                     // If fooditem was eaten, ..
-                    if (player.PlayerSnake.Position.X == foodItem.ItemCoordinate.X && player.PlayerSnake.Position.Y == foodItem.ItemCoordinate.Y)
+                    if (player.Snake.Position.X == foodItem.ItemCoordinate.X && player.Snake.Position.Y == foodItem.ItemCoordinate.Y)
                     {
                         player.Score += foodItem.ScoreValue;
                         foodItem = new FoodItem(FoodItemValue, new Coordinate(randomNumber.Next(Console.WindowWidth), randomNumber.Next(Console.WindowHeight)));
-                        player.PlayerSnake.BodyPartList.Add(new SnakePart(player.PlayerSnake.BodyPartList.Last().PartCoordinate, false));
+                        player.Snake.BodyPartList.Add(new SnakePart(player.Snake.BodyPartList.Last().PartCoordinate, false));
                     }
                 }
 
                 // Render
                 Console.Clear();
-                GameWindow.DrawSnake(player.PlayerSnake);
+                GameWindow.DrawSnake(player.Snake);
                 GameWindow.DrawFoodItem(foodItem);
 
                 System.Threading.Thread.Sleep(1000 / FramesPerSecond);

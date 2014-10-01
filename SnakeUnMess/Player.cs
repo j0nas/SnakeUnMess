@@ -5,20 +5,20 @@
         public Player(Coordinate initialSnakePosition)
         {
             this.Score = 0;
-            this.PlayerSnake = new Snake(initialSnakePosition);
+            this.Snake = new Snake(initialSnakePosition);
         }
 
         // TODO IS THIS WRONG? 
-        public Snake.MovementDirection LastMovementDirection { get; set; }
+        public Direction LastDirection { get; set; }
 
-        public Snake PlayerSnake { get; set; }
+        public Snake Snake { get; set; }
 
         public int Score { get; set; }
 
-        public void MoveSnake(Snake.MovementDirection direction)
+        public void MoveSnake(Direction direction)
         {
-            this.PlayerSnake.Move(direction, this.LastMovementDirection);
-            this.LastMovementDirection = direction;
+            this.Snake.Move(direction, this.LastDirection);
+            this.LastDirection = direction;
         }
     }
 }

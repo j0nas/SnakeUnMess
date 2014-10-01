@@ -19,30 +19,27 @@ namespace SnakeUnMess
             }
         }
 
-        public enum MovementDirection
-        {
-            Up = -1, Down = 1, Left = -2, Right = 2
-        }
-
         public Coordinate Position { get; set; }
         
         public List<SnakePart> BodyPartList { get; set; }
 
-        public void Move(MovementDirection direction, MovementDirection previousDirection)
+        public void Move(Direction direction, Direction previousDirection)
         {
             // TODO use these.
             int x, y;
 
             switch (direction)
             {
-                case MovementDirection.Up:
-                case MovementDirection.Down:
-                    this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X, this.BodyPartList.Last().PartCoordinate.Y + (int)direction);
+                case Direction.Up:
+                    this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X, this.BodyPartList.Last().PartCoordinate.Y - 1);
                     break;
-                case MovementDirection.Right: // TODO fix this stuff with math awesomeness (no more switchcase)
+                case Direction.Down:
+                    this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X, this.BodyPartList.Last().PartCoordinate.Y + 1);
+                    break;
+                case Direction.Right: // TODO fix this stuff with math awesomeness (no more switchcase)
                     this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X + 1, this.BodyPartList.Last().PartCoordinate.Y);
                     break;
-                case MovementDirection.Left:
+                case Direction.Left:
                     this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X - 1, this.BodyPartList.Last().PartCoordinate.Y);
                     break;
             }
