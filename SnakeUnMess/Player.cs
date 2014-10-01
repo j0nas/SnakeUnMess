@@ -2,12 +2,10 @@
 {
     public class Player
     {
-        public Coordinate Position { get; set; }
-
-        public Player()
+        public Player(Coordinate initialSnakePosition)
         {
             this.Score = 0;
-            this.PlayerSnake = new Snake();
+            this.PlayerSnake = new Snake(initialSnakePosition);
         }
 
         // TODO IS THIS WRONG? 
@@ -19,7 +17,7 @@
 
         public void MoveSnake(Snake.MovementDirection direction)
         {
-            this.Position = this.PlayerSnake.Move(direction, this.LastMovementDirection);
+            this.PlayerSnake.Move(direction, this.LastMovementDirection);
             this.LastMovementDirection = direction;
         }
     }

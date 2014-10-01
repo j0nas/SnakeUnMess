@@ -12,7 +12,7 @@
 
         public static void Main(string[] args)
         {
-            var player = new Player();
+            var player = new Player(new Coordinate(10, 10));
             var gameOver = false;
             var snakeDirection = Snake.MovementDirection.Right;
 
@@ -21,7 +21,7 @@
                 FoodItemValue,
                 new Coordinate(randomNumber.Next(Console.WindowWidth), randomNumber.Next(Console.WindowHeight)));
 
-            while (!PlayerCollided(player.Position))
+            while (!gameOver)
             {
                 // Handle user input
                 if (Console.KeyAvailable)
@@ -50,15 +50,15 @@
                 player.MoveSnake(snakeDirection);
 
                 // If player touches the edges of the console window..
-                
+                gameOver = PlayerCollided(player.PlayerSnake.Position);                
 
                 // If self was eaten, ..
                 if (!gameOver)
                 {
                     for (var i = 0; i < player.PlayerSnake.BodyPartList.Count - 1; i++)
                     {
-                        if (player.Position.X == player.PlayerSnake.BodyPartList[i].PartCoordinate.X
-                            && player.Position.Y == player.PlayerSnake.BodyPartList[i].PartCoordinate.Y)
+                        if (player.PlayerSnake.Position.X == player.PlayerSnake.BodyPartList[i].PartCoordinate.X
+                            && player.PlayerSnake.Position.Y == player.PlayerSnake.BodyPartList[i].PartCoordinate.Y)
                         {
                             gameOver = true;
                             break;
@@ -66,7 +66,7 @@
                     }
 
                     // If fooditem was eaten, ..
-                    if (player.Position.X == foodItem.ItemCoordinate.X && player.Position.Y == foodItem.ItemCoordinate.Y)
+                    if (player.PlayerSnake.Position.X == foodItem.ItemCoordinate.X && player.PlayerSnake.Position.Y == foodItem.ItemCoordinate.Y)
                     {
                         player.Score += foodItem.ScoreValue;
                         foodItem = new FoodItem(FoodItemValue, new Coordinate(randomNumber.Next(Console.WindowWidth), randomNumber.Next(Console.WindowHeight)));
