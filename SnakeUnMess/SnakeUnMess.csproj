@@ -42,16 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleGameClient.cs" />
+    <Compile Include="ConsoleInputDevice.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="FoodItem.cs" />
     <Compile Include="GameHandler.cs" />
     <Compile Include="ConsoleGameWindow.cs" />
     <Compile Include="IGameWindow.cs" />
+    <Compile Include="IInputDevice.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Coordinate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Snake.cs" />
     <Compile Include="SnakePart.cs" />
+    <Compile Include="UserRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,7 +10,7 @@
 
         private const int FoodItemValue = 10;
 
-        public void Start(IGameWindow gameWindow)
+        public void Start(IGameWindow gameWindow, IInputDevice inputDevice)
         {
             var player = new Player(new Coordinate(10, 10));
             var gameOver = false;
@@ -19,29 +19,27 @@
             var random = new Random();
             var foodItem = new FoodItem(
                 FoodItemValue,
+                // TODO: Extract console stuff to the GameWindow class.
                 new Coordinate(random.Next(Console.WindowWidth), random.Next(Console.WindowHeight)));
 
             while (!gameOver)
             {
                 // Handle user input
-                if (Console.KeyAvailable)
+                if (inputDevice.KeyAvailable)
                 {
-                    // TODO separate into inputHandler class
-                    var keyPressed = Console.ReadKey().Key;
-                    Console.Write(keyPressed);
-
-                    switch (keyPressed)
+                    // TODO separate into inputHandler 
+                    switch (inputDevice.UserRequest)
                     {
-                        case ConsoleKey.W:
+                        case UserRequest.Up:
                             snakeDirection = Direction.Up;
                             break;
-                        case ConsoleKey.A:
+                        case UserRequest.Left:
                             snakeDirection = Direction.Left;
                             break;
-                        case ConsoleKey.S:
+                        case UserRequest.Down:
                             snakeDirection = Direction.Down;
                             break;
-                        case ConsoleKey.D:
+                        case UserRequest.Right:
                             snakeDirection = Direction.Right;
                             break;
                     }
