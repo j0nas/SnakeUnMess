@@ -1,7 +1,6 @@
 ﻿namespace SnakeUnMess
 {
     using System;
-    using System.Collections.Specialized;
     using System.Linq;
 
     public class GameHandler
@@ -11,16 +10,16 @@
 
         private const int FoodItemValue = 10;
 
-        public static void Main(string[] args)
+        public void Start(IGameWindow gameWindow)
         {
             var player = new Player(new Coordinate(10, 10));
             var gameOver = false;
             var snakeDirection = Direction.Right;
 
-            var randomNumber = new Random();
+            var random = new Random();
             var foodItem = new FoodItem(
                 FoodItemValue,
-                new Coordinate(randomNumber.Next(Console.WindowWidth), randomNumber.Next(Console.WindowHeight)));
+                new Coordinate(random.Next(Console.WindowWidth), random.Next(Console.WindowHeight)));
 
             while (!gameOver)
             {
@@ -51,7 +50,7 @@
                 // Change world
                 player.MoveSnake(snakeDirection);
 
-                // If player touches the edges of the console window..
+                // If player touches the edges of the console gameWindow..
                 gameOver = PlayerCollided(player.Snake.Position);                
 
                 // If self was eaten, ..
@@ -73,15 +72,15 @@
                     if (player.Snake.Position.X == foodItem.ItemCoordinate.X && player.Snake.Position.Y == foodItem.ItemCoordinate.Y)
                     {
                         player.Score += foodItem.ScoreValue;
-                        foodItem = new FoodItem(FoodItemValue, new Coordinate(randomNumber.Next(Console.WindowWidth), randomNumber.Next(Console.WindowHeight)));
+                        foodItem = new FoodItem(FoodItemValue, new Coordinate(random.Next(Console.WindowWidth), random.Next(Console.WindowHeight)));
                         player.Snake.BodyPartList.Add(new SnakePart(player.Snake.BodyPartList.Last().PartCoordinate, false));
                     }
                 }
 
                 // Render
-                Console.Clear();
-                GameWindow.DrawSnake(player.Snake);
-                GameWindow.DrawFoodItem(foodItem);
+                gameWindow.Clear();
+                gameWindow.DrawSnake(player.Snake);
+                gameWindow.DrawFoodItem(foodItem);
 
                 System.Threading.Thread.Sleep(1000 / FramesPerSecond);
             }

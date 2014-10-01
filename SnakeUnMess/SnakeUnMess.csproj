@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleGameClient.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="FoodItem.cs" />
     <Compile Include="GameHandler.cs" />
-    <Compile Include="GameWindow.cs" />
+    <Compile Include="ConsoleGameWindow.cs" />
+    <Compile Include="IGameWindow.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Coordinate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,8 +1,5 @@
 ﻿namespace SnakeUnMess
 {
-    using System;
-    using System.Linq;
-
     public class Coordinate
     {
         public Coordinate(int x, int y)

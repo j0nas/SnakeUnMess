@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class GameWindow
+    public class ConsoleGameWindow : IGameWindow
     {
         private const char SnakeBodyRepresentationChar = '@';
 
@@ -10,7 +10,12 @@
 
         private const char FoodItemRepresentationChar = '$';
 
-        public static void DrawSnake(Snake snake)
+        public void Clear()
+        {
+            Console.Clear();
+        }
+
+        public void DrawSnake(Snake snake)
         {
             var currentConsoleColor = Console.ForegroundColor;
             foreach (var t in snake.BodyPartList)
@@ -22,7 +27,7 @@
             Console.ForegroundColor = currentConsoleColor;
         }
 
-        public static void DrawFoodItem(FoodItem foodItem)
+        public void DrawFoodItem(FoodItem foodItem)
         {
             Console.SetCursorPosition(foodItem.ItemCoordinate.X, foodItem.ItemCoordinate.Y);
             Console.Write(FoodItemRepresentationChar);
