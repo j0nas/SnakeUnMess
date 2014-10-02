@@ -18,7 +18,7 @@
         public void DrawSnake(Snake snake)
         {
             var currentConsoleColor = Console.ForegroundColor;
-            foreach (var t in snake.BodyPartList)
+            foreach (var t in snake.Parts)
             {
                 Console.SetCursorPosition(t.PartCoordinate.X, t.PartCoordinate.Y);
                 Console.ForegroundColor = t.IsHead ? ConsoleColor.DarkCyan : ConsoleColor.DarkBlue;
@@ -32,5 +32,9 @@
             Console.SetCursorPosition(foodItem.ItemCoordinate.X, foodItem.ItemCoordinate.Y);
             Console.Write(FoodItemRepresentationChar);
         }
+
+        public int WindowHeight { get; set; }
+
+        public int WindowWidth { get; set; }
     }
 }

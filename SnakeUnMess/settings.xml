@@ -1,0 +1,27 @@
+﻿<?xml version='1.0'?>
+<!-- This is a sample XML document -->
+<settings>
+  <input>
+    <up>
+      <key>ARROW_UP</key>
+      <key>NUMPAD_8</key>
+      <key>KEY_W</key>
+    </up>
+    <down>
+      <key>ARROW_DOWN</key>
+      <key>NUMPAD_5</key>
+      <key>KEY_S</key>
+    </down>
+
+    <left>
+      <key>ARROW_LEFT</key>
+      <key>NUMPAD_4</key>
+      <key>KEY_A</key>
+    </left>
+    <right>
+      <key>ARROW_RIGHT</key>
+      <key>NUMPAD_6</key>
+      <key>KEY_D</key>
+    </right>
+  </input>  
+</settings>

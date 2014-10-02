@@ -1,7 +1,9 @@
 namespace SnakeUnMess
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Linq.Expressions;
 
     public class Snake
     {
@@ -11,42 +13,44 @@ namespace SnakeUnMess
         public Snake(Coordinate initialPosition, int snakeSize = DefaultSnakeSize)
         {
             this.Position = initialPosition;
-            this.BodyPartList = new List<SnakePart>(snakeSize);
+            this.Parts = new List<SnakePart>(snakeSize);
 
             for (var i = 0; i < snakeSize; i++)
             {
-                this.BodyPartList.Add(new SnakePart(new Coordinate(initialPosition.X + i, initialPosition.Y), false));
+                this.Parts.Add(new SnakePart(new Coordinate(initialPosition.X + i, initialPosition.Y), false));
             }
         }
 
         public Coordinate Position { get; set; }
-        
-        public List<SnakePart> BodyPartList { get; set; }
+
+        public List<SnakePart> Parts { get; set; }
 
         public void Move(Direction direction, Direction previousDirection)
         {
-            // TODO use these.
-            int x, y;
+            var x = this.Parts.Last().PartCoordinate.X;
+            var y = this.Parts.Last().PartCoordinate.Y;
 
             switch (direction)
             {
                 case Direction.Up:
-                    this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X, this.BodyPartList.Last().PartCoordinate.Y - 1);
+                    y--;
                     break;
                 case Direction.Down:
-                    this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X, this.BodyPartList.Last().PartCoordinate.Y + 1);
+                    y++;
                     break;
-                case Direction.Right: // TODO fix this stuff with math awesomeness (no more switchcase)
-                    this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X + 1, this.BodyPartList.Last().PartCoordinate.Y);
+                case Direction.Right:
+                    x++;
                     break;
                 case Direction.Left:
-                    this.Position = new Coordinate(this.BodyPartList.Last().PartCoordinate.X - 1, this.BodyPartList.Last().PartCoordinate.Y);
+                    x--;
                     break;
             }
 
-            this.BodyPartList.Last().IsHead = false;
-            this.BodyPartList.Add(new SnakePart(this.Position, true));
-            this.BodyPartList.Remove(this.BodyPartList.First());
+            this.Position = new Coordinate(x, y);
+
+            this.Parts.Last().IsHead = false;
+            this.Parts.Add(new SnakePart(this.Position, true));
+            this.Parts.Remove(this.Parts.First());
         }
     }
 }

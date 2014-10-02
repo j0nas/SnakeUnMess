@@ -10,11 +10,6 @@
             {
                 return Console.KeyAvailable;
             }
-
-            set
-            {
-                throw new Exception("Fuck you");
-            }
         }
 
         public UserRequest UserRequest
@@ -25,6 +20,7 @@
 
                 switch (key)
                 {
+                    // TODO read available options from config
                     case ConsoleKey.W:
                     case ConsoleKey.UpArrow:
                     case ConsoleKey.NumPad8:
@@ -44,11 +40,6 @@
                     default:
                         return UserRequest.Nothing;
                 }
-            }
-
-            set
-            {
-                throw new Exception("Fuck you");
             }
         }
     }

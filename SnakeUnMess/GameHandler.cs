@@ -53,10 +53,10 @@
 
                 // If self was eaten, ..
                 if (!gameOver)
-                {
-                    for (var i = 0; i < player.Snake.BodyPartList.Count - 1; i++)
+                { // TODO EXTRACT CANNIBALISM!
+                    for (var i = 0; i < player.Snake.Parts.Count - 1; i++)
                     {
-                        var bodyPart = player.Snake.BodyPartList[i];
+                        var bodyPart = player.Snake.Parts[i];
 
                         if (player.Snake.Position.X == bodyPart.PartCoordinate.X
                             && player.Snake.Position.Y == bodyPart.PartCoordinate.Y)
@@ -69,9 +69,9 @@
                     // If fooditem was eaten, ..
                     if (player.Snake.Position.X == foodItem.ItemCoordinate.X && player.Snake.Position.Y == foodItem.ItemCoordinate.Y)
                     {
-                        player.Score += foodItem.ScoreValue;
+                        player.Score += foodItem.ScoreValue; // TODO extract console stuff to ConsoleGameWindow
                         foodItem = new FoodItem(FoodItemValue, new Coordinate(random.Next(Console.WindowWidth), random.Next(Console.WindowHeight)));
-                        player.Snake.BodyPartList.Add(new SnakePart(player.Snake.BodyPartList.Last().PartCoordinate, false));
+                        player.Snake.Parts.Add(new SnakePart(player.Snake.Parts.Last().PartCoordinate, false));
                     }
                 }
 
@@ -80,7 +80,7 @@
                 gameWindow.DrawSnake(player.Snake);
                 gameWindow.DrawFoodItem(foodItem);
 
-                System.Threading.Thread.Sleep(1000 / FramesPerSecond);
+                System.Threading.Thread.Sleep(1000 / FramesPerSecond); // TODO calculate time frame
             }
         }
 

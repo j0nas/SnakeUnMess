@@ -4,8 +4,8 @@
 
     public interface IInputDevice
     {
-        bool KeyAvailable { get; set; }
+        bool KeyAvailable { get; }
 
-        UserRequest UserRequest { get; set;  }
+        UserRequest UserRequest { get; }
     }
 }
