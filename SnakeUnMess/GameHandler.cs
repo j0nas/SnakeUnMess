@@ -7,7 +7,7 @@
     public class GameHandler
     {
         // TODO externalize into config file
-        private const int FramesPerSecond = 12;
+        private const int FramesPerSecond = 2;
         private const int FoodItemValue = 10;
         private const char SnakeBodyRepresentationChar = 'O';
         private const char SnakeHeadRepresentationChar = '@';
@@ -81,7 +81,7 @@
                 }
 
                 // Ensuring 100ms per frame, idle for the remainder of the timeframe.
-                Thread.Sleep(Math.Max(100 - (int)frameTimer.ElapsedMilliseconds, 0));
+                Thread.Sleep(Math.Max((1000 / FramesPerSecond) - (int)frameTimer.ElapsedMilliseconds, 0));
                 frameTimer.Reset();
             }
         }
