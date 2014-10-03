@@ -10,18 +10,18 @@ namespace SnakeUnMess
         // TODO config file?
         private const int DefaultSnakeSize = 4;
 
-        public Snake(Coordinate initialPosition, int snakeSize = DefaultSnakeSize)
+        public Snake(Coordinate initialHeadCoordinate, int snakeSize = DefaultSnakeSize)
         {
-            this.Position = initialPosition;
+            this.HeadCoordinate = initialHeadCoordinate;
             this.Parts = new List<SnakePart>(snakeSize);
 
             for (var i = 0; i < snakeSize; i++)
             {
-                this.Parts.Add(new SnakePart(new Coordinate(initialPosition.X + i, initialPosition.Y), false));
+                this.Parts.Add(new SnakePart(new Coordinate(initialHeadCoordinate.X + i, initialHeadCoordinate.Y), false));
             }
         }
 
-        public Coordinate Position { get; set; }
+        public Coordinate HeadCoordinate { get; set; }
 
         public List<SnakePart> Parts { get; set; }
 
@@ -46,11 +46,27 @@ namespace SnakeUnMess
                     break;
             }
 
-            this.Position = new Coordinate(x, y);
+            // Update position property (== new position of head)
+            this.HeadCoordinate = new Coordinate(x, y);
 
             this.Parts.Last().IsHead = false;
-            this.Parts.Add(new SnakePart(this.Position, true));
+            // The new added part is the new head
+            this.Parts.Add(new SnakePart(this.HeadCoordinate, true));
             this.Parts.Remove(this.Parts.First());
+        }
+
+        public bool HasPerformedCannibalism()
+        {
+            // Since we're checking for collision with the Head (== Parts[0]), omit the head in the check.
+            for (var i = 0; i < this.Parts.Count - 1; i++)
+            {
+                if (GlobalUtilities.MatchingCoordinates(this.HeadCoordinate, this.Parts[i].PartCoordinate))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

@@ -19,15 +19,13 @@
             var random = new Random();
             var foodItem = new FoodItem(
                 FoodItemValue,
-                // TODO: Extract console stuff to the GameWindow class.
-                new Coordinate(random.Next(Console.WindowWidth), random.Next(Console.WindowHeight)));
+                new Coordinate(random.Next(gameWindow.WindowWidth), random.Next(gameWindow.WindowHeight)));
 
             while (!gameOver)
             {
-                // Handle user input
+                // Handle user input using IInputDevice from ConsoleGameClient
                 if (inputDevice.KeyAvailable)
                 {
-                    // TODO separate into inputHandler 
                     switch (inputDevice.UserRequest)
                     {
                         case UserRequest.Up:
@@ -48,26 +46,14 @@
                 // Change world
                 player.MoveSnake(snakeDirection);
 
-                // If player touches the edges of the console gameWindow..
-                gameOver = PlayerCollided(player.Snake.Position);                
+                // If player's snake touches the edges of the console gameWindow or eats itself ..
+                // (Used && and not || since && doesn't evaluate second part of statement if first is false)
+                gameOver = !(!PlayerCollided(player.Snake.HeadCoordinate) && !player.Snake.HasPerformedCannibalism());                
 
-                // If self was eaten, ..
                 if (!gameOver)
-                { // TODO EXTRACT CANNIBALISM!
-                    for (var i = 0; i < player.Snake.Parts.Count - 1; i++)
-                    {
-                        var bodyPart = player.Snake.Parts[i];
-
-                        if (player.Snake.Position.X == bodyPart.PartCoordinate.X
-                            && player.Snake.Position.Y == bodyPart.PartCoordinate.Y)
-                        {
-                            gameOver = true;
-                            break;
-                        }
-                    }
-
+                {
                     // If fooditem was eaten, ..
-                    if (player.Snake.Position.X == foodItem.ItemCoordinate.X && player.Snake.Position.Y == foodItem.ItemCoordinate.Y)
+                    if (GlobalUtilities.MatchingCoordinates(player.Snake.HeadCoordinate, foodItem.ItemCoordinate))
                     {
                         player.Score += foodItem.ScoreValue; // TODO extract console stuff to ConsoleGameWindow
                         foodItem = new FoodItem(FoodItemValue, new Coordinate(random.Next(Console.WindowWidth), random.Next(Console.WindowHeight)));
@@ -84,9 +70,10 @@
             }
         }
 
-        private static bool PlayerCollided(Coordinate newCoord)
+
+        private static bool PlayerCollided(Coordinate newCoordinate)
         {
-            return newCoord.X >= Console.WindowWidth - 1 || newCoord.Y >= Console.WindowHeight || newCoord.X <= 0 || newCoord.Y <= 0;
+            return newCoordinate.X >= Console.WindowWidth - 1 || newCoordinate.Y >= Console.WindowHeight || newCoordinate.X <= 0 || newCoordinate.Y <= 0;
         }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="FoodItem.cs" />
     <Compile Include="GameHandler.cs" />
     <Compile Include="ConsoleGameWindow.cs" />
+    <Compile Include="GlobalUtilities.cs" />
     <Compile Include="IGameWindow.cs" />
     <Compile Include="IInputDevice.cs" />
     <Compile Include="Player.cs" />

@@ -2,13 +2,14 @@
 {
     public interface IGameWindow
     {
+        int WindowHeight { get; }
+
+        int WindowWidth { get; }
+
         void Clear();
 
         void DrawSnake(Snake snake);
 
         void DrawFoodItem(FoodItem foodItem);
-
-        int WindowHeight { get; set; }
-        int WindowWidth { get; set; }
     }
 }

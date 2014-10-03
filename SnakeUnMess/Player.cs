@@ -18,8 +18,8 @@
 
         public void MoveSnake(Direction direction)
         {
-            var directionIsLegal = this.DirectionLegal(direction, LastDirection);
-            this.Snake.Move(directionIsLegal ? direction : LastDirection, this.LastDirection);
+            var directionIsLegal = this.DirectionLegal(direction, this.LastDirection);
+            this.Snake.Move(directionIsLegal ? direction : this.LastDirection, this.LastDirection);
             if (directionIsLegal)
             {
                 // Prevent reverse movement; up when lastDirection is Down, ect.

@@ -10,6 +10,16 @@
 
         private const char FoodItemRepresentationChar = '$';
 
+        public ConsoleGameWindow()
+        {
+            this.WindowHeight = Console.WindowHeight;
+            this.WindowWidth = Console.WindowHeight;
+        }        
+
+        public int WindowHeight { get; private set; }
+
+        public int WindowWidth { get; private set; }
+
         public void Clear()
         {
             Console.Clear();
@@ -21,7 +31,7 @@
             foreach (var t in snake.Parts)
             {
                 Console.SetCursorPosition(t.PartCoordinate.X, t.PartCoordinate.Y);
-                Console.ForegroundColor = t.IsHead ? ConsoleColor.DarkCyan : ConsoleColor.DarkBlue;
+                Console.ForegroundColor = t.IsHead ? ConsoleColor.DarkCyan : ConsoleColor.DarkBlue; // TODO EXTRACT COLORS TO CONFIG
                 Console.Write(t.IsHead ? SnakeHeadRepresentationChar : SnakeBodyRepresentationChar);
             }
             Console.ForegroundColor = currentConsoleColor;
@@ -32,9 +42,5 @@
             Console.SetCursorPosition(foodItem.ItemCoordinate.X, foodItem.ItemCoordinate.Y);
             Console.Write(FoodItemRepresentationChar);
         }
-
-        public int WindowHeight { get; set; }
-
-        public int WindowWidth { get; set; }
     }
 }
