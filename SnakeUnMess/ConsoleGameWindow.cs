@@ -34,6 +34,7 @@
                 Console.ForegroundColor = t.IsHead ? ConsoleColor.DarkCyan : ConsoleColor.DarkBlue; // TODO EXTRACT COLORS TO CONFIG
                 Console.Write(t.IsHead ? SnakeHeadRepresentationChar : SnakeBodyRepresentationChar);
             }
+
             Console.ForegroundColor = currentConsoleColor;
         }
 

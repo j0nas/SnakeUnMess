@@ -2,7 +2,9 @@
 {
     public class GlobalUtilities
     {
-        public static bool MatchingCoordinates(Coordinate a, Coordinate b) // TODO move into global utility class?
+
+
+        public static bool MatchingCoordinates(Coordinate a, Coordinate b)
         {
             return a.X == b.X && a.Y == b.Y;
         }
