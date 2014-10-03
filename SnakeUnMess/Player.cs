@@ -5,16 +5,13 @@
 
     public class Player
     {
-        public Snake Snake { get; private set; }
-
-        private bool extendSnake = false;
-        private Direction lastDirection = Direction.Right;
-
         public Player(Coordinate initialSnakePosition)
         {
             this.Score = 0;
             this.Snake = new Snake(initialSnakePosition);
         }
+
+        public Snake Snake { get; private set; }
 
         public int Score { get; private set; }
 

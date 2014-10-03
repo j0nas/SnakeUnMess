@@ -14,11 +14,6 @@
             this.Y = coordinate.Y;
         }
 
-        protected Coordinate()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public int X { get; set; }
 
         public int Y { get; set; }

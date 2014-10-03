@@ -36,6 +36,10 @@
                     case ConsoleKey.RightArrow:
                     case ConsoleKey.NumPad6:
                         return UserRequest.Right;
+                    case ConsoleKey.Escape:
+                        return UserRequest.Exit;
+                    case ConsoleKey.Spacebar:
+                        return UserRequest.Pause;
                     default:
                         return UserRequest.Nothing;
                 }

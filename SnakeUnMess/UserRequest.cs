@@ -2,7 +2,6 @@
 {
     public enum UserRequest
     {
-        // TODO: pause?
-        Left, Right, Up, Down, Nothing
+        Left, Right, Up, Down, Pause, Exit, Nothing
     }
 }
