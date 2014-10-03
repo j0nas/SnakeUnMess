@@ -20,7 +20,6 @@
 
                 switch (key)
                 {
-                    // TODO read available options from config
                     case ConsoleKey.W:
                     case ConsoleKey.UpArrow:
                     case ConsoleKey.NumPad8:

@@ -1,15 +1,13 @@
 ﻿namespace SnakeUnMess
 {
-    public class FoodItem
+    public class FoodItem : GameElementObject
     {
         public FoodItem(int scoreValue, Coordinate itemCoordinate)
         {
             this.ScoreValue = scoreValue;
-            this.ItemCoordinate = itemCoordinate;
+            this.Coordinate = itemCoordinate;
         }
 
         public int ScoreValue { get; set; }
-
-        public Coordinate ItemCoordinate { get; set; }
     }
 }

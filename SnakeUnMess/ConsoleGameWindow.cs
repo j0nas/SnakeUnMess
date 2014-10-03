@@ -4,44 +4,28 @@
 
     public class ConsoleGameWindow : IGameWindow
     {
-        private const char SnakeBodyRepresentationChar = '@';
-
-        private const char SnakeHeadRepresentationChar = '>';
-
-        private const char FoodItemRepresentationChar = '$';
-
         public ConsoleGameWindow()
         {
-            this.WindowHeight = Console.WindowHeight;
-            this.WindowWidth = Console.WindowHeight;
+            this.Height = Console.WindowHeight;
+            this.Width = Console.WindowWidth;
         }        
 
-        public int WindowHeight { get; private set; }
+        public int Height { get; private set; }
 
-        public int WindowWidth { get; private set; }
+        public int Width { get; private set; }
 
         public void Clear()
         {
             Console.Clear();
         }
 
-        public void DrawSnake(Snake snake)
+        public void DrawObject(Coordinate o, char representationChar, ConsoleColor representationColor)
         {
-            var currentConsoleColor = Console.ForegroundColor;
-            foreach (var t in snake.Parts)
-            {
-                Console.SetCursorPosition(t.PartCoordinate.X, t.PartCoordinate.Y);
-                Console.ForegroundColor = t.IsHead ? ConsoleColor.DarkCyan : ConsoleColor.DarkBlue; // TODO EXTRACT COLORS TO CONFIG
-                Console.Write(t.IsHead ? SnakeHeadRepresentationChar : SnakeBodyRepresentationChar);
-            }
-
-            Console.ForegroundColor = currentConsoleColor;
-        }
-
-        public void DrawFoodItem(FoodItem foodItem)
-        {
-            Console.SetCursorPosition(foodItem.ItemCoordinate.X, foodItem.ItemCoordinate.Y);
-            Console.Write(FoodItemRepresentationChar);
+            var tempColorChange = Console.ForegroundColor;
+            Console.SetCursorPosition(o.X, o.Y);
+            Console.ForegroundColor = representationColor;
+            Console.Write(representationChar);
+            Console.ForegroundColor = tempColorChange;
         }
     }
 }

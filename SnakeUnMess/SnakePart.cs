@@ -1,14 +1,12 @@
 namespace SnakeUnMess
 {
-    public class SnakePart
+    public class SnakePart : GameElementObject
     {
-        public SnakePart(Coordinate partCoordinate, bool isHead)
+        public SnakePart(Coordinate coordinate, bool isHead)
         {
-            this.PartCoordinate = partCoordinate;
+            this.Coordinate = coordinate;
             this.IsHead = isHead;
         }
-
-        public Coordinate PartCoordinate { get; set; }
 
         public bool IsHead { get; set; }
     }

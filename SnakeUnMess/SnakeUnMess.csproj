@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurator.cs" />
     <Compile Include="ConsoleGameClient.cs" />
     <Compile Include="ConsoleInputDevice.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="FoodItem.cs" />
+    <Compile Include="GameElementObject.cs" />
     <Compile Include="GameHandler.cs" />
     <Compile Include="ConsoleGameWindow.cs" />
     <Compile Include="GlobalUtilities.cs" />
@@ -61,11 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="settings.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

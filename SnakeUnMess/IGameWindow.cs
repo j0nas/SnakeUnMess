@@ -1,15 +1,15 @@
 ﻿namespace SnakeUnMess
 {
+    using System;
+
     public interface IGameWindow
     {
-        int WindowHeight { get; }
+        int Height { get; }
 
-        int WindowWidth { get; }
+        int Width { get; }
 
         void Clear();
 
-        void DrawSnake(Snake snake);
-
-        void DrawFoodItem(FoodItem foodItem);
+        void DrawObject(Coordinate o, char representationChar, ConsoleColor representationColor);
     }
 }
