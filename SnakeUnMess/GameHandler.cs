@@ -51,17 +51,14 @@
 
                 // Change world
                 player.MoveSnake(snakeDirection);
-                Console.Write(3);
 
                 // If player's snake touches the edges of the console gameWindow, eats itself or no more place to spawn food ..
-                gameOver = false;//PlayerCollided(player.SnakeHeadCoordinate, gameWindow) || player.SnakeSelfCollided() || FoodCheck(player, ref foodItem, gameWindow);
-                Console.Write(4);
+                gameOver = PlayerCollided(player.Snake.HeadCoordinate, gameWindow) || player.SnakeSelfCollided() || FoodCheck(player, ref foodItem, gameWindow);
 
                 // Render
                 gameWindow.Clear();
-                Console.Write(5);
 
-                foreach (var part in player.GetSnakeParts())
+                foreach (var part in player.Snake.Parts)
                 {
                     gameWindow.DrawObject(
                         part.Coordinate,
@@ -77,19 +74,20 @@
 
         private bool FoodCheck(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
         {
-            if (GlobalUtilities.MatchingCoordinates(player.SnakeHeadCoordinate, foodItem.Coordinate))
+            if (GlobalUtilities.MatchingCoordinates(player.Snake.HeadCoordinate, foodItem.Coordinate))
             {
                 player.AteFood(foodItem.ScoreValue);
-                if ((player.GetSnakeParts().Length + 1) >= (gameWindow.Height * gameWindow.Width))
+                foodItem = new FoodItem(
+                    foodItem.ScoreValue,
+                    GlobalUtilities.RandomCoordinate(gameWindow.Width, gameWindow.Height));
+
+                if ((player.Snake.Parts.Count + 1) >= (gameWindow.Height * gameWindow.Width))
                 {
                     // No more room to place FoodItem, GG.
                     return true;
                 }
             }
 
-            foodItem = new FoodItem(
-                    foodItem.ScoreValue,
-                    GlobalUtilities.RandomCoordinate(gameWindow.Width, gameWindow.Height));
             return false;
         }
 
