@@ -15,7 +15,7 @@
 
     public class GameHandler
     {
-        private const int FramesPerSecond = 24;
+        private const int FramesPerSecond = 10;
 
         private const int FoodItemValue = 10;
 

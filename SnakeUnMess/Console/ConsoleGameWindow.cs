@@ -8,17 +8,17 @@
 
     public class ConsoleGameWindow : IGameWindow
     {
-        private const char SnakeBodyRepresentationChar = 'O'; // TODO
+        private const char SnakeBodyRepresentationChar = 'O';
 
-        private const char SnakeHeadRepresentationChar = '@'; // TODO
+        private const char SnakeHeadRepresentationChar = '@';
 
-        private const ConsoleColor SnakeHeadColor = ConsoleColor.Green; // TODO
+        private const ConsoleColor SnakeHeadColor = ConsoleColor.Green;
 
-        private const ConsoleColor SnakeBodyColor = ConsoleColor.Green; // TODO
+        private const ConsoleColor SnakeBodyColor = ConsoleColor.Green;
 
-        private const char FoodItemRepresentationChar = '$'; // TODO
+        private const char FoodItemRepresentationChar = '$';
 
-        private const ConsoleColor FoodItemColor = ConsoleColor.Red; // TODO
+        private const ConsoleColor FoodItemColor = ConsoleColor.Red;
 
         public ConsoleGameWindow()
         {
