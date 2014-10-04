@@ -4,7 +4,6 @@
     using System.Diagnostics;
     using System.Drawing;
     using System.Linq;
-    using System.Threading;
 
     using SnakeUnMess.Elements;
     using SnakeUnMess.Elements.FoodItem;
@@ -51,45 +50,53 @@
             {
                 HandlePlayerInput();
 
-                if (!this.gamePaused)
+                if (this.gamePaused)
                 {
-                    // Change world                    
-                    var nextPosition = player.Snake.NextMovePoint(snakeDirection);
-
-                    // If next move is invalid because Snake either touches edges or itself ..
-                    // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
-                    gameOver = !(PointIsWithinBounds(nextPosition) && !SnakeIsCannibal(nextPosition));
-                    if (!gameOver)
-                    {
-                        player.Snake.Move(nextPosition);
-
-                        if (FoodHasBeenEaten())
-                        {
-                            player.Scored(foodItem.ScoreValue);
-
-                            // If no more place to spawn food ..
-                            if (SnakeFillsScreen())
-                            {
-                                TerminateApplication();
-                            }
-
-                            foodItem.Position = FindNewFoodPosition();
-                        }
-                    }
-
-                    // Render
-                    gameClient.GameWindow.Clear();
-                    foreach (var part in player.Snake.Parts)
-                    {
-                        gameClient.GameWindow.DrawObject(part.Position, part.Type);
-                    }
-
-                    gameClient.GameWindow.DrawObject(this.foodItem.Position, GameObjectType.Food);
+                    continue;
+                }
+            
+                // Ensuring idletime for framerate consistency.
+                if ((int)frameTimer.ElapsedMilliseconds < 1000 / FramesPerSecond)
+                {
+                    continue;
                 }
 
-                // Ensuring idletime for framerate consistency.
-                Thread.Sleep(Math.Max((1000 / FramesPerSecond) - (int)frameTimer.ElapsedMilliseconds, 0));
-                frameTimer.Reset();
+                frameTimer.Restart();
+
+                // Change world                    
+                var nextPosition = player.Snake.NextMovePoint(snakeDirection);
+
+                // If next move is invalid because Snake either touches edges or itself ..
+                // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
+                gameOver = !(PointIsWithinBounds(nextPosition) && !SnakeIsCannibal(nextPosition));
+                if (!gameOver)
+                {
+                    // TODO
+                    player.Snake.Move(nextPosition);
+
+                    if (FoodHasBeenEaten())
+                    {
+                        player.Scored(foodItem.ScoreValue);
+
+                        // If no more place to spawn food ..
+                        if (SnakeFillsScreen())
+                        {
+                            TerminateApplication();
+                        }
+
+                        foodItem.Position = FindNewFoodPosition();
+                    }
+                }
+
+                // TODO
+                // Render
+                gameClient.GameWindow.Clear();
+                foreach (var part in player.Snake.Parts)
+                {
+                    gameClient.GameWindow.DrawObject(part.Position, part.Type);
+                }
+
+                gameClient.GameWindow.DrawObject(this.foodItem.Position, GameObjectType.Food);    
             }
         }
 

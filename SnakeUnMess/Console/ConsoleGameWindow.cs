@@ -22,6 +22,7 @@
 
         public ConsoleGameWindow()
         {
+            Console.CursorVisible = false;
             this.Height = Console.WindowHeight;
             this.Width = Console.WindowWidth;
             this.Rectangle = new Rectangle(0, 0, this.Width, this.Height);
