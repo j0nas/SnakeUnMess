@@ -1,7 +1,9 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess.Console
 {
     using System;
     using System.Drawing;
+
+    using SnakeUnMess.Interfaces;
 
     public class ConsoleGameWindow : IGameWindow
     {

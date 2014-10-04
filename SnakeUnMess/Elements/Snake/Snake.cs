@@ -1,4 +1,4 @@
-namespace SnakeUnmess
+namespace SnakeUnMess.Elements.Snake
 {
     using System;
     using System.Collections.Generic;
@@ -35,9 +35,9 @@ namespace SnakeUnmess
         {
             if (!this.DirectionLegal(desiredDirection))
             {
-                desiredDirection = lastDirection;
+                desiredDirection = this.lastDirection;
             }
-            lastDirection = desiredDirection;
+            this.lastDirection = desiredDirection;
 
             var x = this.Parts.Last().Point.X;
             var y = this.Parts.Last().Point.Y;
@@ -87,13 +87,13 @@ namespace SnakeUnmess
             switch (goalDirection)
             {
                 case Direction.Up:
-                    return lastDirection != Direction.Down;
+                    return this.lastDirection != Direction.Down;
                 case Direction.Down:
-                    return lastDirection != Direction.Up;
+                    return this.lastDirection != Direction.Up;
                 case Direction.Left:
-                    return lastDirection != Direction.Right;
+                    return this.lastDirection != Direction.Right;
                 case Direction.Right:
-                    return lastDirection != Direction.Left;
+                    return this.lastDirection != Direction.Left;
                 default:
                     throw new Exception("Illegal direction!");
             }

@@ -2,6 +2,8 @@
 {
     using System.Drawing;
 
+    using SnakeUnMess.Elements;
+
     public class FoodItem : GameElementObject
     {
         public FoodItem(Point point, int scoreValue)

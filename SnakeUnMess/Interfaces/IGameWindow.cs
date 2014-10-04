@@ -1,4 +1,4 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess.Interfaces
 {
     using System;
     using System.Drawing;

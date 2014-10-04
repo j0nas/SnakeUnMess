@@ -1,0 +1,1413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b3cd6bfe-f2df-4a93-a8e2-d55b7c8e20e7"
+  name="Snake"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d5bf958a-ec35-49b5-8294-4f189e417282"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSnakeUnMess.Elements.Snake"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <enumeration
+        Id="1939543d-95c8-424f-b3c1-4bbde52ecfa9"
+        name="Direction"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="9b7c3dbe-d8f0-4271-bad3-030140660583"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="696e0e53-323f-4c70-9536-d09c2d91ee25"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4a67707b-3df3-44cd-8e7a-f675050e81a0">
+                <propertyInstance
+                  Id="f9257431-c929-4e9c-ab76-bb897d257992"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="89f1b85d-d99c-4012-9368-fc632636b42c">
+                <propertyInstance
+                  Id="e408038f-b202-4f10-ba78-8b44f8dec1cd"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c0c19d16-2849-4f61-be66-3e1f6c4cebd9">
+                <propertyInstance
+                  Id="29d8f1da-8812-43e5-b716-9fd17fa03f09"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="05f76631-e726-4c04-a4f6-e6e7dafdf826"
+            name="Up">
+            <referencesInternal>
+              <reference
+                Id="66d8aa65-c3e0-4a82-8d57-1c34563a768a"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection Member%3DUp"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="6acdbfad-82a3-4077-8193-13cbb7c1f95d"
+            name="Down">
+            <referencesInternal>
+              <reference
+                Id="06742cf4-c738-46b4-bdac-49f6b2d3482c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection Member%3DDown"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="46cd1e8e-4306-4bbf-b5e1-f1455f7843fb"
+            name="Left">
+            <referencesInternal>
+              <reference
+                Id="4243e152-61c2-4b40-bafb-f637c0393521"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection Member%3DLeft"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="17402b6d-e6cf-4fdd-ad77-2f64de668978"
+            name="Right">
+            <referencesInternal>
+              <reference
+                Id="07dc733a-a084-46da-a53a-0e6ee514e127"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection Member%3DRight"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3a4ff19f-172b-48c6-b03c-5844b2b4efd7"
+        name="Snake"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cb0a9446-ec9c-4ebf-9244-03063f90f93e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ac34a263-2243-4607-96a2-8a01456c3200"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="48247701-27bc-4675-b312-5855deb94f68">
+                <propertyInstance
+                  Id="a73578f4-669f-4d9d-bd29-14203ae55d80"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76238e95-d8af-4ece-9450-1bce6200a41b">
+                <propertyInstance
+                  Id="a695dfbd-f778-4b9f-af6f-bafac2732457"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="913f608f-17ba-4000-a814-7ca49fafa5b3">
+                <propertyInstance
+                  Id="42d38212-a795-458f-9551-52b0b2a668f8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ca6c303b-e6b6-4af9-a713-f44603a0f7e8">
+                <propertyInstance
+                  Id="e6e5e970-8ef5-42a6-ab9c-d51706fb4181"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b79aa0d-861a-469c-865f-fd79d0591a3b">
+                <propertyInstance
+                  Id="9b50cb62-c4a1-4ce6-8d0b-22a2b93c83ee"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="21be12bf-873c-43dc-837e-45f6163891e5"
+            isDerived="false"
+            sourceEndRoleName="Snake"
+            targetEndRoleName="HeadPoint"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+              LastKnownName="Point"
+              LastKnownLocation="Package2_1444.uml" />
+            <description>Property HeadPoint references type Point.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="050ea593-ad1f-4b18-ba1c-a1d2df9d6809"
+                  name="Snake"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f64493c7-8383-4068-be95-cd4cc2a4614d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d601ff1a-9c72-46bf-b13f-c77a6d146840"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e15b93a-e83b-4ccf-a042-1b6040498b56"
+                  name="HeadPoint"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bb053666-957e-4555-a64f-b6c8d4205173"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="52cb44fb-da0d-4834-ad81-f6647ae97386"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dbe5188f-3fb4-418a-88d4-bd9fdccf2f7a"
+            isDerived="false"
+            sourceEndRoleName="Snake"
+            targetEndRoleName="Parts"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="51a14bef-0180-43bf-8ec2-4a190e283ad5"
+              LastKnownName="List&lt;SnakePart‎&gt;"
+              LastKnownLocation="Package4_1444.uml" />
+            <description>Property Parts references type List&lt;SnakePart‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0de2df06-ccb9-4c59-977b-a88efcfe02a9"
+                  name="Snake"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f4f63e49-ebfd-4ade-b3c9-63e965af63d3"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="78685ad7-5ac7-4e70-86a8-8d9559371cf2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6949571-3917-4639-adb3-12488e7d264c"
+                  name="Parts"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6d8987e6-9667-4fab-827a-0558c02b1133"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e4a776de-8ebf-4e0c-b01a-2acde55af244"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="09418eec-3d16-451b-b3b3-2f3dffc0160c"
+            isDerived="false"
+            sourceEndRoleName="Snake"
+            targetEndRoleName="SnakePart"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f39024b5-5967-496d-a802-5241d1524c4e"
+              LastKnownName="SnakePart"
+              LastKnownLocation="Package5_1722.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d118332-a0e2-4cdf-8d36-836e6d705b96"
+                  name="Snake"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f42da5eb-261c-461f-a5bb-ba5a5cde2147"
+                  name="SnakePart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="64de2eff-ad60-46bb-bb48-44b7cc470c42"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="734d8f49-995f-4267-b6f7-1212ed8252fc"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b76a81d1-508a-40a7-b6ce-80a3e488dff9"
+            name="HeadPoint"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8a046406-01c6-4e15-a867-b74b911aa673"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3DHeadPoint"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1c748700-4576-48dd-bf0e-715ba4c58846"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80c2adae-ac11-4ebe-8e95-5224891b34b7">
+                    <propertyInstance
+                      Id="067ebba9-208b-45c6-839b-0d3c39632ab3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1cebb437-9bc0-4ef0-8f00-2b139b4b68b5">
+                    <propertyInstance
+                      Id="5c3f9d53-b3e8-4839-ba88-582538465425"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14b71436-84de-4468-9a31-b34af6a64acb">
+                    <propertyInstance
+                      Id="d812d26e-22f4-483a-85fe-7f042837b06f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64e11a44-58f9-41d0-8e34-74f09edd9476">
+                    <propertyInstance
+                      Id="fc5ebd25-9451-4ec1-8b27-3f1e2f9be83b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e10a7ad-9992-49ac-921d-50de2b0166a0">
+                    <propertyInstance
+                      Id="14b87c7c-6e6f-4c94-9059-ce9c1b917b4a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd616a23-4d78-4f82-821d-8ad81c0e4096">
+                    <propertyInstance
+                      Id="f8844813-db36-4526-9f88-bd9edfa7b089"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54a4dfad-7454-4a2c-9d3d-24a173dcd802">
+                    <propertyInstance
+                      Id="178ebf84-a2be-4e1e-b633-2802eedeb64b"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+                LastKnownName="Point"
+                LastKnownLocation="Package2_1444.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ca3db374-a97b-4b71-bf96-12157ea8c3f8"
+            name="Parts"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3db3015e-1997-494a-9247-e55276608ad4"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3DParts"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0a983c97-20cf-4cfb-bb47-c442d54a7153"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a453fd7-e925-40f9-a757-2103d6efd9e9">
+                    <propertyInstance
+                      Id="b8061119-a761-4f20-acf9-13f3ebe1d50a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d94220e0-5269-463e-8a51-aaaa22597b0c">
+                    <propertyInstance
+                      Id="673ba9a3-5d15-4ab6-98b9-4c77bf434aa3"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83a55b75-98fd-4f03-b70d-49df1bd0c23a">
+                    <propertyInstance
+                      Id="e14de428-dd49-42aa-a3c2-2e6a41d52c6a"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3faf8b2f-495b-468e-bf8f-020ba685c0bd">
+                    <propertyInstance
+                      Id="7d69e940-2921-4417-8466-3d9dd7814088"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6d84556-1797-4aab-b78d-28564576a925">
+                    <propertyInstance
+                      Id="a9342a7d-2093-4512-a8b8-16ce583a8e56"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26e2544d-a35e-4b73-a739-3238411f7dec">
+                    <propertyInstance
+                      Id="4dfe761e-cad0-46c4-8fad-f5134ddf962d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf0c2b67-81b4-4a6e-91b6-ad4122b3aae6">
+                    <propertyInstance
+                      Id="c608d5ef-1dbb-4926-aaae-bd910d7be914"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="51a14bef-0180-43bf-8ec2-4a190e283ad5"
+                LastKnownName="List&lt;SnakePart‎&gt;"
+                LastKnownLocation="Package4_1444.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="501c3e20-e5cc-4cd4-96cd-6142a2f84a04"
+            name="DefaultSnakeSize"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3f3506a9-2873-4bb2-a608-0e80c8372281"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3DDefaultSnakeSize"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="97d0c40c-9694-43f2-ac99-cdbf1fc8aafd"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c485aa3-4c52-4be5-9915-3a1b65386d3c">
+                    <propertyInstance
+                      Id="51e3cbbd-31ae-41f6-bd80-bfeceba59236"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6cff7a0b-4bcf-482a-9fa5-9c191b878741">
+                    <propertyInstance
+                      Id="e5a22d12-f919-4b22-9848-b8b3a8343df3"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ac73bdd-eef1-49a7-8939-595c7558d327">
+                    <propertyInstance
+                      Id="9fbb0e1a-b41a-46fc-95df-36d7d4fc45aa"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3966819-a099-43c8-835b-cb75aaefdf65">
+                    <propertyInstance
+                      Id="38675594-f11b-4803-87fe-ac61f05bb001"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5fa4ffc-9a02-4ea5-b3ab-eb9ed48d3f95">
+                    <propertyInstance
+                      Id="55b53c4b-fb07-461e-953f-90fe8f49c678"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="c31c06fc-396d-45ad-b3f1-9e41564ae2f2"
+            name="lastDirection"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5911fccd-c67f-4070-952d-87453b73633d"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3DlastDirection"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="887964b4-7ba3-4ade-a906-b0e1e3263e8a"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efdc59a4-5452-4ea3-a24a-f427cb069785">
+                    <propertyInstance
+                      Id="9bfbad0b-c2fd-4041-a18c-6e43bdd9a85c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8367f8e-a97d-46cb-9867-92bd33cec1b6">
+                    <propertyInstance
+                      Id="0537d779-0f44-4353-baca-6e07e4fbf875"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb9d0835-840c-40f1-ad09-4df1367c8191">
+                    <propertyInstance
+                      Id="d0395ce9-d666-4dbd-a096-398bae7ddfdb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4c63acb-f98a-465f-96f5-960cc736b70a">
+                    <propertyInstance
+                      Id="19798f7a-4ca5-4827-ba3a-c4e3c1c64378"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bfcfd3e-4cc1-48e2-990b-760fb301a754">
+                    <propertyInstance
+                      Id="6d7de8cd-0831-4025-948c-46581dbf71ee"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="1939543d-95c8-424f-b3c1-4bbde52ecfa9"
+                LastKnownName="Direction"
+                LastKnownLocation="Package5_1722.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="30a154c1-ba6a-4d06-81ee-4fe1a4e2680a"
+            name="mustExtend"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f349d1a1-640a-4da7-9a19-ce6cdfaf6edf"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3DmustExtend"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5e5cae70-4e21-462f-aca0-8790cf27348d"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="231bfaa4-4fc5-4e92-822c-25c968b75944">
+                    <propertyInstance
+                      Id="979f1371-a4cc-4de8-afb8-8cdb71cddd15"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38783b1a-4483-466c-ac8f-061a08e9df54">
+                    <propertyInstance
+                      Id="1bf6f5c3-7872-47c6-a4f0-42f184f7880c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ecdb341-2bfc-4627-8010-f1fda10fa8b6">
+                    <propertyInstance
+                      Id="ed37f1f9-21b5-4abd-aac7-1812dc3d734a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5ffaea4-bd19-492e-a7fc-5a8fb4f9d481">
+                    <propertyInstance
+                      Id="30376052-aaea-47d4-aac8-c5d9929b18bc"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c712329-0f32-4019-b7ac-5c2d73ba528d">
+                    <propertyInstance
+                      Id="341560df-740a-455e-be9b-8c725e06a68d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="SnakeUnmessModels.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4a206fef-ecf6-4401-9e60-619b4360f00f"
+            name="Snake"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="72a4518b-1c53-41c6-bee8-d398772fb616"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bfe015ea-6fbd-45b5-88cf-16e9276c8180"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9aee9a12-936c-4d3e-ab7d-2e387acefc41">
+                    <propertyInstance
+                      Id="5be162bc-6bc6-409e-9b35-3805e43cc985"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac246882-72e0-422e-9468-7bd1f9f7491e">
+                    <propertyInstance
+                      Id="da0e4b26-2cfe-4377-b0c3-713af03c3317"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="341042b2-c6c5-4247-b28e-10358af47636">
+                    <propertyInstance
+                      Id="6c6d4cc4-3901-4366-ab7a-d04e83998c6a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="301be5a5-fd50-4632-8667-78f0e0c365a8">
+                    <propertyInstance
+                      Id="3544e8ff-c560-433c-a39f-634c38a38e46"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16c84887-3761-415b-ba2c-06d7bb16ae73">
+                    <propertyInstance
+                      Id="f7c4ee43-cd01-434b-a655-2e3302d34155"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87a60685-db9e-4033-8a16-7bec93eb4d90">
+                    <propertyInstance
+                      Id="04be9eef-9eb8-4c3a-b38c-5d02b1c4c6cc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9e128747-5697-44bb-b874-8f9f3e46426e"
+                  name="initialHeadPoint"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="657d4a1b-787b-4246-8c6a-e7db1c19d91e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DinitialHeadPoint"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+                      LastKnownName="Point"
+                      LastKnownLocation="Package2_1444.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8c875e7a-10d1-440c-86fe-4b58dedfcbed"
+                  name="snakeSize"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="084e1833-a2fe-437e-ae01-f78ac1c5a5c6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DsnakeSize"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="SnakeUnmessModels.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a0c5950e-af50-4bee-a989-0c29173ff2c2"
+            name="NextMovePoint"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4f2266f1-a28d-41e8-a1a4-a57eedb381be"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3DNextMovePoint OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="df8d32f6-3af3-44cb-868b-7ca05b902564"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9e13105-2c4e-4623-870a-f686dd6eda73">
+                    <propertyInstance
+                      Id="65bb2591-01cb-4924-bc63-4bbbc7cfc514"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c84b5510-d9b7-40f5-acf9-9e4ad748eac4">
+                    <propertyInstance
+                      Id="a7e56a04-f099-4ae2-bea0-9607bf5353d8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da3afe48-453e-488b-86de-35dc0637f299">
+                    <propertyInstance
+                      Id="01a1f2a1-c0fc-463d-946f-55a5e8c21dd6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7955cc00-d323-4405-ab13-1cc670dd4dbd">
+                    <propertyInstance
+                      Id="b8087096-2142-4443-bbfa-2ad01d681676"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de23e89c-8079-4a1f-8bae-5ed5678a388e">
+                    <propertyInstance
+                      Id="21533fc2-6a3f-4d2a-9bf7-6be2fa845523"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="535e0d9d-396c-43f1-a842-05ed3221a653">
+                    <propertyInstance
+                      Id="99baa16c-841e-4cb5-a7b1-eedca5181ef2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="06d50ff8-971e-42db-88c3-c14a09530e17"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+                      LastKnownName="Point"
+                      LastKnownLocation="Package2_1444.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bfeb2e18-ec2c-433e-b90a-dfcad83591b6"
+                  name="desiredDirection"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="272fd3d1-f4fb-4410-ad87-17a6bd612050"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3DNextMovePoint OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection)]) ParameterIdentifier%3DdesiredDirection"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="1939543d-95c8-424f-b3c1-4bbde52ecfa9"
+                      LastKnownName="Direction"
+                      LastKnownLocation="Package5_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b75a5549-b391-461d-af15-00c46d9d97ee"
+            name="Move"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ad38a9cf-231d-4b14-9fb4-f6a283302930"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d7b2c671-2c86-4058-bc1d-79e16c2c822b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97ab4aad-09d1-49b1-91d9-d0b072233edb">
+                    <propertyInstance
+                      Id="aea5e2c0-c560-4506-8dde-7888abcd233f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="722e6236-31fe-4a54-bbbc-92eadbfb3a2b">
+                    <propertyInstance
+                      Id="64ac62bc-d825-4553-9bf7-acf241b50f4c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="083ac519-1470-4fb4-b6af-e3eaf3244718">
+                    <propertyInstance
+                      Id="f34aec4b-3760-4b35-a3a4-e7c418ccc58f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa3edf5a-4a15-41a0-8bde-a0a027546c14">
+                    <propertyInstance
+                      Id="fc08ce9a-da8a-4256-9417-3f8fb5fac0ba"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80c583df-d286-459f-85b8-9806dab867dd">
+                    <propertyInstance
+                      Id="8e94d5ee-9ba7-48ad-938d-db6dfdcf8aa3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6570e8f-3fb5-4bfc-a931-c7a8417851d2">
+                    <propertyInstance
+                      Id="784074b4-7264-4fa5-a61c-33ae511be87d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad2db6c7-5560-462f-8e32-cf5bad2bae08"
+                  name="point"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4a6d1a80-cdbb-45fd-a6b1-60892f6d0c86"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3DMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)]) ParameterIdentifier%3Dpoint"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+                      LastKnownName="Point"
+                      LastKnownLocation="Package2_1444.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3ee9a509-966d-4853-9cd6-40e18376103c"
+            name="Extend"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c4391bad-fba6-4a9c-8c56-d0991f5ededc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3DExtend"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="214047a3-4135-4e43-9f8b-47fc70ee30c2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f0cc99e-aa54-40a1-a087-f43a3d5933b1">
+                    <propertyInstance
+                      Id="10c2e1f9-8db5-4586-b83c-8a1da5fd6d76"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9254e9b-c994-4f37-872b-7a4fe906d29f">
+                    <propertyInstance
+                      Id="0363b656-aa74-45b7-b51d-2b40ab41ba1f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb5f073b-40b1-418e-b9c6-c91022ab7e55">
+                    <propertyInstance
+                      Id="ca044a8c-a0f6-4185-8773-e7da1c72fdec"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12651461-1451-4c43-9612-6c04a39796b7">
+                    <propertyInstance
+                      Id="5e0834ab-bf8f-46f9-9797-679378664741"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="503476d0-3be6-4796-9524-81172ccb1110">
+                    <propertyInstance
+                      Id="bae12f12-537f-4230-9816-64260db57683"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c3d13fb-792b-4d01-a033-3c50a9b66445">
+                    <propertyInstance
+                      Id="170e9bc0-c33a-47cb-874b-355fd95cc380"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="21611a70-caeb-4193-9f36-0f736e429259"
+            name="DirectionLegal"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a0ebf2c4-5625-4a73-9b23-19162fca0bb7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3DDirectionLegal OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bf85fd68-483a-4767-8ef2-ec4a7393990b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b8cb144-75a9-48d3-8a7f-574bd87a5027">
+                    <propertyInstance
+                      Id="feea1069-a992-456a-9bb6-a2cef26458b3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9aa61422-8ed8-4534-95f2-646190f1e0b6">
+                    <propertyInstance
+                      Id="7bf6ba87-8c45-4637-895f-2644b20d55ef"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd745e85-fa8a-4efb-8234-b54c4029283f">
+                    <propertyInstance
+                      Id="621dbee9-d2d8-4afb-9233-9c74a288cbe3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66219fbf-8313-4af2-a9b3-c1535350f74f">
+                    <propertyInstance
+                      Id="8b40e20e-7b98-452f-b537-5c9e5d03bda0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="695e668d-5132-42e8-bf05-0daa2562371a">
+                    <propertyInstance
+                      Id="65db49da-f4ca-487c-ac88-2514d70b8701"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cef7999e-f710-4e9a-85aa-f6a837d42557">
+                    <propertyInstance
+                      Id="cdbf495d-b4ff-477c-bb72-fc05f10f9de2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f43e9f23-430c-4e36-b0ac-fc1f4474eb13"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SnakeUnmessModels.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fe3af5b8-fd64-40d6-b132-cf85c18d90b1"
+                  name="goalDirection"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b3698e7a-1334-4c45-afba-e4090da5382e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnake Member%3D(Name%3DDirectionLegal OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DDirection)]) ParameterIdentifier%3DgoalDirection"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="1939543d-95c8-424f-b3c1-4bbde52ecfa9"
+                      LastKnownName="Direction"
+                      LastKnownLocation="Package5_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f39024b5-5967-496d-a802-5241d1524c4e"
+        name="SnakePart"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1b614977-8e9b-4a3a-a40c-3577c07e4e5b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnakePart"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="539ff7ac-ee8c-4afd-a939-dcc0b9b2ac9c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e832057-5888-486d-8903-41bf347279d3">
+                <propertyInstance
+                  Id="9311217f-ae43-4b25-85dd-038bc5004a89"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3ced3bcb-5e90-489e-bbe9-fdfdede2acaa">
+                <propertyInstance
+                  Id="c375535d-2deb-4334-bf6f-3bb2b601865f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e8b4b74b-e1d9-4da7-a160-ef12f0384479">
+                <propertyInstance
+                  Id="c5afaa2a-a6e0-4d5e-b2ae-1a975d0091d6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d893c15-19a8-4591-b6fe-5a05a5254a99">
+                <propertyInstance
+                  Id="04319632-1d55-41c1-9882-7b4d37c5aa58"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a00143f-cee0-4446-af25-8516f68a59ca">
+                <propertyInstance
+                  Id="1b066a6b-6573-4eec-89c1-f2d7bac89332"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="1bf932e3-8403-4cb2-9e76-9494a8f19b02"
+            isSubstitutable="false">
+            <classMoniker
+              Id="792bd2c6-145c-4cde-9d9c-bb1f137a0d79"
+              LastKnownName="GameElementObject"
+              LastKnownLocation="Package1_1722.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="9c9986d9-746f-4bfb-96ff-b44d58ebd82e"
+            name="IsHead"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c7fcaa0f-6fc5-47f8-a8b6-04a08a02f384"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnakePart Member%3DIsHead"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2693bfc4-6d9a-4644-8908-e87b51b84045"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5b77ce9-ae91-4e75-8989-5e12f391602c">
+                    <propertyInstance
+                      Id="099f6380-0664-4416-9991-629f075ffc3b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9eeb80a-57b4-45c8-a44b-eb53b54bfc3b">
+                    <propertyInstance
+                      Id="f0d7a074-b088-42d2-b279-9c30fb9c4d8d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d6c29b4-f18c-42f5-aa48-606ebd5dd79f">
+                    <propertyInstance
+                      Id="41cd850d-7052-4e1f-b536-9c3c4ee2a53b"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e95447f0-dbb7-4433-9e00-0eced3525791">
+                    <propertyInstance
+                      Id="2e951f35-de2c-45db-bc64-40c904bd5056"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce67e57b-f0fe-44e3-81e3-9698d7673007">
+                    <propertyInstance
+                      Id="170b3a36-fbff-4a26-a0e4-bedf1b977f04"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c77de5eb-0eab-4fcc-a243-033ac7523513">
+                    <propertyInstance
+                      Id="0153c42b-8819-4188-b623-e2f7325debbc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80b73f79-b818-4cb4-882d-de2bfe2743b9">
+                    <propertyInstance
+                      Id="7d3f2d32-af78-4de8-9b1c-66442ef033d2"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="SnakeUnmessModels.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ca330305-0a0d-4219-b6d3-d741b295c714"
+            name="SnakePart"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="32830312-3b96-4e29-b764-15bb214a921f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnakePart Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="50547db3-1dba-4b0f-8361-b37df1ba2f3a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8c358ed-d248-4326-b3e7-c23287c10e18">
+                    <propertyInstance
+                      Id="d3872ef6-a354-4bdf-8c9b-573b5aa306bb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78c2bb6e-ebdd-4317-b767-e35180bbfdea">
+                    <propertyInstance
+                      Id="2e18fc74-2cb7-448e-9cc4-1b20584adb85"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="085ba5ac-bf3c-44ea-acd9-19d2d9e1e655">
+                    <propertyInstance
+                      Id="93708c2e-3af9-4758-92ab-3d199903bf61"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2aa1aef-2612-440a-b394-56fc3261ac64">
+                    <propertyInstance
+                      Id="3ac7e006-6c32-4582-bc3b-9851a0059f2f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d04283d0-f55e-4d17-9722-22d704eea2cf">
+                    <propertyInstance
+                      Id="1a01ac7f-717c-4b3b-a40f-3395f1578896"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd852665-0ff2-4609-ad74-d6d0440f5fe5">
+                    <propertyInstance
+                      Id="6f19f410-30a8-4cf7-9f7b-0fae5bdb792a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="923ee580-d298-4d07-a20b-27e65c967ca0"
+                  name="point"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8475803a-0ad0-4794-bd08-ec96440d4dc7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnakePart Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dpoint"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+                      LastKnownName="Point"
+                      LastKnownLocation="Package2_1444.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="98e36d4b-1d6d-44c3-bc89-34de657a0a7b"
+                  name="isHead"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="32cedc54-7401-4e38-bd8c-85f7098b323b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements.Snake Type%3DSnakePart Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DisHead"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="SnakeUnmessModels.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,6 +1,8 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess.Elements.Player
 {
     using System.Drawing;
+
+    using SnakeUnMess.Elements.Snake;
 
     public class Player
     {

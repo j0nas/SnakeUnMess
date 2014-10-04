@@ -1,4 +1,4 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess.Elements.Snake
 {
     public enum Direction
     {

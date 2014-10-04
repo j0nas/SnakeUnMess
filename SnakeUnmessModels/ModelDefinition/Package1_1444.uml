@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="fc8c210e-f3cd-402c-9f64-3b84671f8465"
+  name="System"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="503dd092-bf60-457a-acbd-d91adb614e09"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="35669419-ad91-477c-bec3-6fb25fd5dba7">
+      <profileInstance
+        Id="88a78e0d-e4d3-4f04-82d5-15d6960c9c8f"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c36a9c4f-e1d1-4d7d-8238-fb60f07c0aa0"
+        LastKnownName="Drawing"
+        LastKnownLocation="Package2_1444.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="301c15d1-d1c8-4761-81bd-7a849c0dc4d8"
+        name="Char"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="14add2a5-b97a-4af4-b4c0-8c1badd1cfe0"
+            handle="viewcode://./CodeSchema_Struct?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cde7876c-54da-4422-9f26-6a12b4f5be94"
+            name="struct"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52bb59e9-2283-42bf-9012-f7fe2e08e7c8">
+                <propertyInstance
+                  Id="123ea3a1-f04a-441a-b87b-877cce0fd17a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2016487-1fe6-4562-bc47-b59d79661747">
+                <propertyInstance
+                  Id="10aaeda5-db7a-4790-81af-1c16a0a985c7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="20f1ab3e-385f-40e0-a4db-16151c54d643">
+                <propertyInstance
+                  Id="fc1fe0a9-49da-4146-b091-20e383a2d436"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77a7602f-81e9-4575-b608-08081448ba3c">
+                <propertyInstance
+                  Id="fdd6da6a-889a-42a6-8356-bde39354a62a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="61ced95d-7799-4f2a-b0b8-fc17692a45b6"
+        name="ConsoleColor"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="b9afe6ab-c666-4ed7-915d-5984f80bb451"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DConsoleColor"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d1251924-ae8c-4737-870f-1685df00f3d1"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="882472f7-545d-486d-a77a-a573496331e6">
+                <propertyInstance
+                  Id="273226ad-2403-4e3b-a0f3-084736b9a0ee"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b0a1066-6077-4ab3-90b9-74f2ada73a8e">
+                <propertyInstance
+                  Id="d02f1d90-30c1-4bd4-9ffa-b623eb9801d4"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c87eb895-ca81-4834-a7aa-2eef96fba946">
+                <propertyInstance
+                  Id="4fe5d35d-6bc8-43e6-91cf-b9b46ad82256"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="81805ec7-adf1-4be5-9464-bb0595b3e986"
+        LastKnownName="Collections"
+        LastKnownLocation="Package3_1444.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,6 +1,8 @@
-namespace SnakeUnmess
+namespace SnakeUnMess.Elements.Snake
 {
     using System.Drawing;
+
+    using SnakeUnMess.Elements;
 
     public class SnakePart : GameElementObject
     {

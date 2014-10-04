@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e48b7a88-80f1-444d-a9aa-2b444b6c3dbc"
+  name="SnakeUnMess"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="19f2c2e3-aa99-4c83-bbe1-fe99994e0947"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSnakeUnMess"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ece74aad-7436-450d-badc-8c93cc6954d8"
+        LastKnownName="Elements"
+        LastKnownLocation="Package1_1722.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2b36743f-1956-4c58-a511-315394a84256"
+        name="Application"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="71cf50b3-03f3-4149-be4c-bb701c2a541d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess Type%3DApplication"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="17ded64b-1b6f-496b-9592-d9f853dc31cc"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="39affc81-009b-4b3a-87a9-586e6417d9a7">
+                <propertyInstance
+                  Id="4c61c303-e3f3-4ff0-9cb5-93e254667a80"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f49c3fd6-a978-477b-9ba6-9852f66d47c4">
+                <propertyInstance
+                  Id="ed43e0d5-4d37-4132-b954-acaef869931b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ce0147d-555b-4ca5-9435-009867e00065">
+                <propertyInstance
+                  Id="ac19d191-05f2-4976-9e70-435f10c6e68d"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f8e1f80-4bda-4b7b-a601-0da919f08ac5">
+                <propertyInstance
+                  Id="fe8f705b-246c-4867-900d-d86b643bc0eb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0c242e3-5c3e-43cf-87f4-752588f7fa0f">
+                <propertyInstance
+                  Id="3134b16e-bde1-42d6-b3b7-cb7211fb97de"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5313871b-3d38-4ee9-8166-ed35b23262b6"
+            name="Main"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cb30a278-3515-40a8-b554-d30a4cff406e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess Type%3DApplication Member%3D(Name%3DMain OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="50c26aef-6a56-4db9-a5f0-61364f905d70"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1337b880-869c-4061-8dcd-f383f5f34b9f">
+                    <propertyInstance
+                      Id="7f1f54fa-7924-48a0-9f00-2e0d139ce674"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbdb9983-f282-47dc-a0f5-e9a61075903f">
+                    <propertyInstance
+                      Id="53b0ecef-3f34-4785-9326-dbc572c83da4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74f458f4-cde1-494a-9ee4-87e8486dc5c9">
+                    <propertyInstance
+                      Id="07e8d917-b7ef-42a1-b4e7-00dda983bc5b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85839d78-01c3-4ecd-8aec-644ba8d09ea6">
+                    <propertyInstance
+                      Id="0be018f9-1d63-4b8d-b4e4-0cc99b217d58"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cfcdd6dd-7d17-4cb7-ab3d-5db2b7900493">
+                    <propertyInstance
+                      Id="78fc3ef4-85f9-4b5d-9937-ba36caa53379"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="baa020c6-65a7-4e41-8e0e-2f538ea165df">
+                    <propertyInstance
+                      Id="c071de72-976c-4d1b-9a72-30f40121dbe3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d1007a08-454b-49ce-8995-48a73a5a06f0"
+        LastKnownName="Console"
+        LastKnownLocation="Package2_1722.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="29cb1df7-b010-4bd2-8dd4-b8c562c83828"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package3_1722.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

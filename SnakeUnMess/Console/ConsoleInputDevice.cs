@@ -1,6 +1,8 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess.Console
 {
     using System;
+    using SnakeUnMess.Elements.Player;
+    using SnakeUnMess.Interfaces;
 
     public class ConsoleInputDevice : IInputDevice
     {
@@ -12,7 +14,7 @@
             }
         }
 
-        public UserRequest UserRequest
+        public PlayerRequest PlayerRequest
         {
             get
             {
@@ -23,25 +25,25 @@
                     case ConsoleKey.W:
                     case ConsoleKey.UpArrow:
                     case ConsoleKey.NumPad8:
-                        return UserRequest.Up;
+                        return PlayerRequest.Up;
                     case ConsoleKey.A:
                     case ConsoleKey.LeftArrow:
                     case ConsoleKey.NumPad4:
-                        return UserRequest.Left;
+                        return PlayerRequest.Left;
                     case ConsoleKey.S:
                     case ConsoleKey.DownArrow:
                     case ConsoleKey.NumPad5:
-                        return UserRequest.Down;
+                        return PlayerRequest.Down;
                     case ConsoleKey.D:
                     case ConsoleKey.RightArrow:
                     case ConsoleKey.NumPad6:
-                        return UserRequest.Right;
+                        return PlayerRequest.Right;
                     case ConsoleKey.Escape:
-                        return UserRequest.Exit;
+                        return PlayerRequest.Exit;
                     case ConsoleKey.Spacebar:
-                        return UserRequest.Pause;
+                        return PlayerRequest.Pause;
                     default:
-                        return UserRequest.Nothing;
+                        return PlayerRequest.Nothing;
                 }
             }
         }

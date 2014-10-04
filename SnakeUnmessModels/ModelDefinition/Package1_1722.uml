@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ece74aad-7436-450d-badc-8c93cc6954d8"
+  name="Elements"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d9c1d9db-7f82-4f96-90fb-ec7825bcb856"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSnakeUnMess.Elements"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="792bd2c6-145c-4cde-9d9c-bb1f137a0d79"
+        name="GameElementObject"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6752aa60-4011-4176-94df-edda5cb58615"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements Type%3DGameElementObject"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="23e2ceb1-d78f-45bd-9978-55c0a9b8e7c8"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eb831d67-db71-4939-ba36-dc6f9a67aaad">
+                <propertyInstance
+                  Id="8b4eb88e-340b-43d9-bcee-f9543e35d518"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08c04ec3-8088-41c8-b530-65e6903e0afe">
+                <propertyInstance
+                  Id="ebd647e8-e219-49cf-b4c9-e019ab9b30dc"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="788925ad-994e-406e-94a4-a7588778731b">
+                <propertyInstance
+                  Id="13169aa5-2295-4240-938d-f0ab1bcfeba4"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ad7f0e7a-fa3d-4161-a555-26d548ef803d">
+                <propertyInstance
+                  Id="bc84e0c3-2905-4724-9520-29bb70061f84"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4379513-a356-480b-bf99-31edb464beca">
+                <propertyInstance
+                  Id="6e2f90e6-f48b-49e0-999a-324812389626"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="91ffc35a-78e8-46ac-bb75-16a7d62155dc"
+            isDerived="false"
+            sourceEndRoleName="GameElementObject"
+            targetEndRoleName="Point"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+              LastKnownName="Point"
+              LastKnownLocation="Package2_1444.uml" />
+            <description>Property Point references type Point.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd94b5b6-6759-4937-9c4e-a0aa60fecdad"
+                  name="GameElementObject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b7d320f0-bf6f-4236-ab42-a8b4e07cfd7d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e54aa6ac-88a3-4037-844c-7097f0131aa2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="516025f3-5525-491d-9e04-03078b571791"
+                  name="Point"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="abecdc54-1a50-404f-af45-b16baacba807"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b07a46e0-9f37-4bff-b539-f7c5a8be9b1f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c2bcc77e-0584-4e5b-b343-3ab871655fd4"
+            name="Point"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0cf32955-2535-4ed3-b1c5-899a6f09a553"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements Type%3DGameElementObject Member%3DPoint"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="434b75fa-7730-4de5-a40c-33086eabda9e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bcbd021-e67a-40a7-8c75-c40b2f1e463d">
+                    <propertyInstance
+                      Id="c2dc2ebe-2841-4973-a7f0-c5ce2d4adf37"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1182959e-4fd3-45b8-99a3-2400d37d4f27">
+                    <propertyInstance
+                      Id="68ec7879-d171-4fc4-a8b4-a1cc222a6490"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d415ebaa-4956-497f-ad41-e29ccbb4c4c9">
+                    <propertyInstance
+                      Id="a3b3d79f-377d-42ec-a304-a92d133dfeb3"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34291e86-b9b4-4878-a37f-b3db096e0c7f">
+                    <propertyInstance
+                      Id="a7efb844-7de7-40e6-9ecf-a4ceb99866d3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5b8e785-d322-47ec-a2fc-d6e23039c95a">
+                    <propertyInstance
+                      Id="fbf6f1d0-4e86-4c4d-acc6-237e19779f71"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44f6161c-f277-40d0-bceb-ec0e553571d8">
+                    <propertyInstance
+                      Id="ecbe7387-6cad-40f6-9ab5-ff8798944f33"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77fd98cd-d8b2-42bf-9d28-ab7dce7a6e58">
+                    <propertyInstance
+                      Id="9bdd66c7-a70e-419d-b889-5c6dffa60e79"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="069474ce-8201-4cfc-b0f1-2a5ef38e6897"
+                LastKnownName="Point"
+                LastKnownLocation="Package2_1444.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b5345465-ac01-405a-a388-f91ab363dce3"
+            name="GameElementObject"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a751209b-a396-44c3-b3ae-df8f046637c8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements Type%3DGameElementObject Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a9937a09-21f4-4453-bb00-e4f3087c73e6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62c94318-7800-4413-beeb-21afafa1a65f">
+                    <propertyInstance
+                      Id="79e97473-f27f-4f08-a2fe-bec1d1318b87"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2387955d-b7e6-4ed4-8f4f-8d7c9ecbe59c">
+                    <propertyInstance
+                      Id="f6af11d0-f4d6-4600-a345-684356a439ea"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00d2634d-fc23-4e15-9f80-c8dbf8ce0255">
+                    <propertyInstance
+                      Id="c6611004-9a57-4b75-836e-8d94a4e9dfe5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0296057-0804-4306-b94f-a22b705a9a11">
+                    <propertyInstance
+                      Id="ea2bb810-31fa-4b45-8f58-2be30b1afd9a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="773c1f79-c3bd-471c-9a25-5429f846ca19">
+                    <propertyInstance
+                      Id="e10da091-36bc-4741-bbc0-7ade6e9ff4bd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d96bfcdd-a9e1-40fd-850a-7f45319ec926">
+                    <propertyInstance
+                      Id="c927c89e-476e-4341-81f0-dcfa1c09ce38"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c3e8f24f-021e-4ed1-9ba1-25295ec7f463"
+        LastKnownName="Player"
+        LastKnownLocation="Package4_1722.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b3cd6bfe-f2df-4a93-a8e2-d55b7c8e20e7"
+        LastKnownName="Snake"
+        LastKnownLocation="Package5_1722.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
