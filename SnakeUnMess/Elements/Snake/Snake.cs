@@ -39,8 +39,8 @@ namespace SnakeUnMess.Elements.Snake
             }
             this.lastDirection = desiredDirection;
 
-            var x = this.Parts.Last().Point.X;
-            var y = this.Parts.Last().Point.Y;
+            var x = this.Parts.Last().Position.X;
+            var y = this.Parts.Last().Position.Y;
 
             switch (desiredDirection)
             {

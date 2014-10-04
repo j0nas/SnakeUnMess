@@ -27,15 +27,25 @@
 
         private static readonly Point PlayerStartingPoint = new Point(10, 10);
 
-        public void Start(IGameClient gameClient)
+        private readonly IGameClient gameClient;
+
+        private Player player;
+
+        private FoodItem foodItem;
+
+        public GameHandler(IGameClient gameClient)
         {
-            var player = new Player(PlayerStartingPoint);
+            this.gameClient = gameClient;
+        }
+
+        public void Start()
+        {
+            player = new Player(PlayerStartingPoint);
             var gameOver = false;
             var gamePaused = false;
 
             var snakeDirection = Direction.Right;
-            var foodItem = new FoodItem(new Point(0, 0), FoodItemValue);
-            PlaceFood(player, ref foodItem, gameClient.GameWindow);
+            foodItem = new FoodItem(this.FindNewFoodPosition(), FoodItemValue);
 
             var frameTimer = new Stopwatch();
             frameTimer.Start();
@@ -76,13 +86,23 @@
 
                     // If next move is invalid because Snake either touches edges or itself ..
                     // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
-                    gameOver = !(gameClient.GameWindow.Rectangle.Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Point.Equals(nextMovePoint))); // TODO extract into methods?
+                    gameOver = !(gameClient.GameWindow.Rectangle.Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Position.Equals(nextMovePoint))); // TODO extract into methods?
                     if (!gameOver)
                     {
                         player.Snake.Move(nextMovePoint);
 
-                        // If no more place to spawn food ..
-                        gameOver = this.FoodHasBeenEaten(player, ref foodItem, gameClient.GameWindow);
+                        if (FoodHasBeenEaten())
+                        {
+                            player.Scored(foodItem.ScoreValue);
+
+                            // If no more place to spawn food ..
+                            if (SnakeFillsScreen())
+                            {
+                                TerminateApplication();
+                            }
+
+                            foodItem.Position = FindNewFoodPosition();
+                        }
                     }
 
                     // Render
@@ -90,12 +110,12 @@
                     foreach (var part in player.Snake.Parts)
                     {
                         gameClient.GameWindow.DrawObject(
-                            part.Point,
+                            part.Position,
                             part.IsHead ? SnakeHeadRepresentationChar : SnakeBodyRepresentationChar,
                             part.IsHead ? SnakeHeadColor : SnakeBodyColor);
                     }
 
-                    gameClient.GameWindow.DrawObject(foodItem.Point, FoodItemRepresentationChar, FoodItemColor);
+                    gameClient.GameWindow.DrawObject(foodItem.Position, FoodItemRepresentationChar, FoodItemColor);
                 }
 
                 // Ensuring idletime for framerate consistency.
@@ -104,41 +124,34 @@
             }
         }
 
+        private bool SnakeFillsScreen()
+        {
+            return this.player.Snake.Parts.Count + 1
+                   >= this.gameClient.GameWindow.Height * this.gameClient.GameWindow.Width;
+        }
+
         private void TerminateApplication()
         {
             Environment.Exit(0);
         }
 
-        private bool FoodHasBeenEaten(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
+        private bool FoodHasBeenEaten()
         {
             // If player's snake's headCoord collides with foodItem.. 
-            if (player.Snake.HeadPoint.Equals(foodItem.Point))
-            {
-                player.Scored(foodItem.ScoreValue);
-
-                if ((player.Snake.Parts.Count + 1) >= (gameWindow.Height * gameWindow.Width))
-                {
-                    // No more room to place FoodItem
-                    return true;
-                }
-
-                PlaceFood(player, ref foodItem, gameWindow);
-            }
-
-            return false;
+            return player.Snake.HeadPoint.Equals(foodItem.Position);
         }
 
-        private void PlaceFood(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
+        private Point FindNewFoodPosition()
         {
             Point foodSpawnPoint;
             do
             {
                 // Place given foodItem at a random point. If it collides with player's snake, repeat this process.
-                foodSpawnPoint = GlobalUtilities.RandomPoint(gameWindow.Width, gameWindow.Height);
+                foodSpawnPoint = GlobalUtilities.RandomPoint(gameClient.GameWindow.Width, gameClient.GameWindow.Height);
             }
-            while (player.Snake.Parts.Any(part => part.Point.Equals(foodSpawnPoint)));
+            while (player.Snake.Parts.Any(part => part.Position.Equals(foodSpawnPoint)));
 
-            foodItem = new FoodItem(foodSpawnPoint, foodItem.ScoreValue);
+            return foodSpawnPoint;
         }
     }
 }

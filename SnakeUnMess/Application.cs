@@ -9,7 +9,7 @@
         public static void Main(string[] args)
         {
             // Define GameWindow and InputDevice for the gameHandler to use and pass it
-            new GameHandler().Start(new ConsoleGameClient(new ConsoleGameWindow(), new ConsoleInputDevice()));
+            new GameHandler(new ConsoleGameClient(new ConsoleGameWindow(), new ConsoleInputDevice())).Start();
         }
 
     }

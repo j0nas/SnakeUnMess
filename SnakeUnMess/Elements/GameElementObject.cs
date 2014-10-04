@@ -4,6 +4,6 @@
 
     public class GameElementObject
     {
-        public Point Point { get; set; }
+        public Point Position { get; set; }
     }
 }

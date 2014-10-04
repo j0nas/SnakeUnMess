@@ -6,10 +6,10 @@
 
     public class FoodItem : GameElementObject
     {
-        public FoodItem(Point point, int scoreValue)
+        public FoodItem(Point position, int scoreValue)
         {
             this.ScoreValue = scoreValue;
-            this.Point = point;
+            this.Position = position;
         }
 
         public int ScoreValue { get; set; }
