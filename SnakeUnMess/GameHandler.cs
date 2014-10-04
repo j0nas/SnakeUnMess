@@ -1,4 +1,4 @@
-﻿namespace SnakeUnMess
+﻿namespace SnakeUnmess
 {
     using System;
     using System.Diagnostics;
@@ -63,7 +63,7 @@
 
                     // If next move is invalid because Snake either touches edges or itself ..
                     // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
-                    gameOver = !(gameWindow.GetRectangle().Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Point.Equals(nextMovePoint)));
+                    gameOver = !(gameWindow.Rectangle.Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Point.Equals(nextMovePoint)));
                     if (!gameOver)
                     {
                         player.Snake.Move(nextMovePoint);

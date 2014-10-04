@@ -1,4 +1,4 @@
-﻿namespace SnakeUnMess
+﻿namespace SnakeUnmess
 {
     using System;
     using System.Drawing;
@@ -9,16 +9,14 @@
         {
             this.Height = Console.WindowHeight;
             this.Width = Console.WindowWidth;
+            this.Rectangle = new Rectangle(0, 0, this.Width, this.Height);
         }        
 
         public int Height { get; private set; }
 
         public int Width { get; private set; }
 
-        public Rectangle GetRectangle()
-        {
-            return new Rectangle(0, 0, this.Width, this.Height);
-        }
+        public Rectangle Rectangle { get; private set; }
 
         public void Clear()
         {

@@ -1,4 +1,4 @@
-﻿namespace SnakeUnMess
+﻿namespace SnakeUnmess
 {
     public interface IInputDevice
     {

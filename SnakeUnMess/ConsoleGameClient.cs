@@ -1,6 +1,6 @@
-﻿namespace SnakeUnMess
+﻿namespace SnakeUnmess
 {
-    public class ConsoleGameClient
+    public static class ConsoleGameClient
     {
         public static void Main(string[] args)
         {

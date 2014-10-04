@@ -1,4 +1,4 @@
-namespace SnakeUnMess
+namespace SnakeUnmess
 {
     using System;
     using System.Collections.Generic;
@@ -61,47 +61,16 @@ namespace SnakeUnMess
             return new Point(x, y);
         }
 
-        public void Move(Point point)// Direction direction)
+        public void Move(Point point)
         {
-            /*
-            var directionIsLegal = this.DirectionLegal(direction);
-
-            if (!directionIsLegal)
-            {
-                direction = lastDirection;
-            }
-            else
-            {
-                lastDirection = direction;
-            }
-
-            var x = this.Parts.Last().Point.X;
-            var y = this.Parts.Last().Point.Y;
-
-            switch (direction)
-            {
-                case Direction.Up:
-                    y--;
-                    break;
-                case Direction.Down:
-                    y++;
-                    break;
-                case Direction.Right:
-                    x++;
-                    break;
-                case Direction.Left:
-                    x--;
-                    break;
-            }
-            */
             // Update position property (== new position of head)
-            this.HeadPoint = point;// new Point(x, y);
+            this.HeadPoint = point;
             this.Parts.Last().IsHead = false;
 
             // The new added part is the new head
             this.Parts.Add(new SnakePart(this.HeadPoint, true));
             if (!this.mustExtend)
-            {
+            { // TODO maybe optiminze this algo a bit :: already have target point, maybe init/add not needed?
                 this.Parts.Remove(this.Parts.First());
             }
 

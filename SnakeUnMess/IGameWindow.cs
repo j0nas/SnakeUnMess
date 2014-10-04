@@ -1,4 +1,4 @@
-﻿namespace SnakeUnMess
+﻿namespace SnakeUnmess
 {
     using System;
     using System.Drawing;
@@ -9,7 +9,7 @@
 
         int Width { get; }
 
-        Rectangle GetRectangle();
+        Rectangle Rectangle { get; }
 
         void Clear();
 
