@@ -3,6 +3,8 @@
     using System;
     using System.Drawing;
 
+    using SnakeUnMess.Elements;
+
     public interface IGameWindow
     {
         int Height { get; }
@@ -13,6 +15,6 @@
 
         void Clear();
 
-        void DrawObject(Point o, char representationChar, ConsoleColor representationColor);
+        void DrawObject(Point o, GameObjectType type);
     }
 }

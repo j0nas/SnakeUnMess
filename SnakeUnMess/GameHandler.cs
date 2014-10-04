@@ -6,6 +6,7 @@
     using System.Linq;
     using System.Threading;
 
+    using SnakeUnMess.Elements;
     using SnakeUnMess.Elements.FoodItem;
     using SnakeUnMess.Elements.Player;
     using SnakeUnMess.Elements.Snake;
@@ -14,15 +15,8 @@
 
     public class GameHandler
     {
-        private const int FramesPerSecond = 10;
+        private const int FramesPerSecond = 24;
 
-        private const char SnakeBodyRepresentationChar = 'O'; // TODO
-        private const char SnakeHeadRepresentationChar = '@'; // TODO
-        private const ConsoleColor SnakeHeadColor = ConsoleColor.Green; // TODO
-        private const ConsoleColor SnakeBodyColor = ConsoleColor.Green; // TODO
-
-        private const char FoodItemRepresentationChar = '$'; // TODO
-        private const ConsoleColor FoodItemColor = ConsoleColor.Red; // TODO
         private const int FoodItemValue = 10;
 
         private static readonly Point PlayerStartingPoint = new Point(10, 10);
@@ -87,13 +81,10 @@
                     gameClient.GameWindow.Clear();
                     foreach (var part in player.Snake.Parts)
                     {
-                        gameClient.GameWindow.DrawObject(
-                            part.Position,
-                            part.IsHead ? SnakeHeadRepresentationChar : SnakeBodyRepresentationChar,
-                            part.IsHead ? SnakeHeadColor : SnakeBodyColor);
+                        gameClient.GameWindow.DrawObject(part.Position, part.Type);
                     }
 
-                    gameClient.GameWindow.DrawObject(foodItem.Position, FoodItemRepresentationChar, FoodItemColor);
+                    gameClient.GameWindow.DrawObject(this.foodItem.Position, GameObjectType.Food);
                 }
 
                 // Ensuring idletime for framerate consistency.

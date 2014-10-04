@@ -6,12 +6,12 @@ namespace SnakeUnMess.Elements.Snake
 
     public class SnakePart : GameElementObject
     {
-        public SnakePart(Point position, bool isHead)
+        public SnakePart(Point position, GameObjectType type)
         {
             this.Position = position;
-            this.IsHead = isHead;
+            this.Type = type;
         }
 
-        public bool IsHead { get; set; }
+        public GameObjectType Type { get; set; }
     }
 }

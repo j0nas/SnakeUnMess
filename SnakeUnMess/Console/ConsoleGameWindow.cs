@@ -3,10 +3,23 @@
     using System;
     using System.Drawing;
 
+    using SnakeUnMess.Elements;
     using SnakeUnMess.Interfaces;
 
     public class ConsoleGameWindow : IGameWindow
     {
+        private const char SnakeBodyRepresentationChar = 'O'; // TODO
+
+        private const char SnakeHeadRepresentationChar = '@'; // TODO
+
+        private const ConsoleColor SnakeHeadColor = ConsoleColor.Green; // TODO
+
+        private const ConsoleColor SnakeBodyColor = ConsoleColor.Green; // TODO
+
+        private const char FoodItemRepresentationChar = '$'; // TODO
+
+        private const ConsoleColor FoodItemColor = ConsoleColor.Red; // TODO
+
         public ConsoleGameWindow()
         {
             this.Height = Console.WindowHeight;
@@ -25,13 +38,30 @@
             Console.Clear();
         }
 
-        public void DrawObject(Point o, char representationChar, ConsoleColor representationColor)
+        public void DrawObject(Point o, GameObjectType type)
         {
-            var tempColorChange = Console.ForegroundColor;
             Console.SetCursorPosition(o.X, o.Y);
-            Console.ForegroundColor = representationColor;
-            Console.Write(representationChar);
-            Console.ForegroundColor = tempColorChange;
+            var previousForegroundColor = Console.ForegroundColor;
+
+            switch (type)
+            {
+                case GameObjectType.Head:
+                    Console.ForegroundColor = SnakeHeadColor;
+                    Console.Write(SnakeHeadRepresentationChar);
+                    break;
+                case GameObjectType.Body:
+                    Console.ForegroundColor = SnakeBodyColor;
+                    Console.Write(SnakeBodyRepresentationChar);
+                    break;
+                case GameObjectType.Food:
+                    Console.ForegroundColor = FoodItemColor;
+                    Console.Write(FoodItemRepresentationChar);
+                    break;
+                default:
+                    throw new Exception("Type '" + type + "' is not a supported GameObjectType.");
+            }
+
+            Console.ForegroundColor = previousForegroundColor;
         }
     }
 }

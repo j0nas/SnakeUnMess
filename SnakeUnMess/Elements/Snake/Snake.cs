@@ -22,7 +22,7 @@ namespace SnakeUnMess.Elements.Snake
             for (var i = 0; i < snakeSize; i++)
             {
                 this.Parts.Add(
-                    new SnakePart(new Point(initialHeadPoint.X + i, initialHeadPoint.Y), false));
+                    new SnakePart(new Point(initialHeadPoint.X + i, initialHeadPoint.Y), GameObjectType.Body));
             }
         }
 
@@ -65,10 +65,10 @@ namespace SnakeUnMess.Elements.Snake
         {
             // Update position property (== new position of head)
             this.HeadPoint = point;
-            this.Parts.Last().IsHead = false;
+            this.Parts.Last().Type = GameObjectType.Body;
 
             // The new added part is the new head
-            this.Parts.Add(new SnakePart(this.HeadPoint, true));
+            this.Parts.Add(new SnakePart(this.HeadPoint, GameObjectType.Head));
             if (!this.mustExtend)
             {
                 this.Parts.Remove(this.Parts.First());

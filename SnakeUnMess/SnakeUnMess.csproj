@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Console\ConsoleGameClient.cs" />
     <Compile Include="Console\ConsoleInputDevice.cs" />
+    <Compile Include="Elements\GameObjectType.cs" />
     <Compile Include="Elements\Snake\Direction.cs" />
     <Compile Include="Elements\FoodItem\FoodItem.cs" />
     <Compile Include="Elements\GameElementObject.cs" />
