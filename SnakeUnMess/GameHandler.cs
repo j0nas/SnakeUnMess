@@ -33,6 +33,10 @@
 
         private FoodItem foodItem;
 
+        private Direction snakeDirection = Direction.Right;
+
+        private bool gamePaused;
+
         public GameHandler(IGameClient gameClient)
         {
             this.gameClient = gameClient;
@@ -42,10 +46,8 @@
         {
             player = new Player(PlayerStartingPoint);
             var gameOver = false;
-            var gamePaused = false;
 
-            var snakeDirection = Direction.Right;
-            foodItem = new FoodItem(this.FindNewFoodPosition(), FoodItemValue);
+            foodItem = new FoodItem(FindNewFoodPosition(), FoodItemValue);
 
             var frameTimer = new Stopwatch();
             frameTimer.Start();
@@ -53,43 +55,19 @@
             // Game mainloop
             while (!gameOver)
             {
-                // Handle user input using IInputDevice from ConsoleGameClient
-                if (gameClient.InputDevice.KeyAvailable)
-                {
-                    switch (gameClient.InputDevice.PlayerRequest)
-                    {
-                        case PlayerRequest.Up:
-                            snakeDirection = Direction.Up;
-                            break;
-                        case PlayerRequest.Left:
-                            snakeDirection = Direction.Left;
-                            break;
-                        case PlayerRequest.Down:
-                            snakeDirection = Direction.Down;
-                            break;
-                        case PlayerRequest.Right:
-                            snakeDirection = Direction.Right;
-                            break;
-                        case PlayerRequest.Pause:
-                            gamePaused = !gamePaused;
-                            break;
-                        case PlayerRequest.Exit:
-                            TerminateApplication();
-                            throw new Exception("Termination failed");
-                    }
-                }
+                HandlePlayerInput();
 
-                if (!gamePaused)
+                if (!this.gamePaused)
                 {
                     // Change world                    
-                    var nextMovePoint = player.Snake.NextMovePoint(snakeDirection);
+                    var nextPosition = player.Snake.NextMovePoint(snakeDirection);
 
                     // If next move is invalid because Snake either touches edges or itself ..
                     // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
-                    gameOver = !(gameClient.GameWindow.Rectangle.Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Position.Equals(nextMovePoint))); // TODO extract into methods?
+                    gameOver = !(PointIsWithinBounds(nextPosition) && !SnakeIsCannibal(nextPosition));
                     if (!gameOver)
                     {
-                        player.Snake.Move(nextMovePoint);
+                        player.Snake.Move(nextPosition);
 
                         if (FoodHasBeenEaten())
                         {
@@ -121,6 +99,44 @@
                 // Ensuring idletime for framerate consistency.
                 Thread.Sleep(Math.Max((1000 / FramesPerSecond) - (int)frameTimer.ElapsedMilliseconds, 0));
                 frameTimer.Reset();
+            }
+        }
+
+        private bool PointIsWithinBounds(Point point)
+        {
+            return gameClient.GameWindow.Rectangle.Contains(point);
+        }
+
+        private bool SnakeIsCannibal(Point point)
+        {
+            return player.Snake.Parts.Any(part => part.Position.Equals(point));
+        }
+
+        private void HandlePlayerInput()
+        {
+            if (gameClient.InputDevice.KeyAvailable)
+            {
+                switch (gameClient.InputDevice.PlayerRequest)
+                {
+                    case PlayerRequest.Up:
+                        this.snakeDirection = Direction.Up;
+                        break;
+                    case PlayerRequest.Left:
+                        this.snakeDirection = Direction.Left;
+                        break;
+                    case PlayerRequest.Down:
+                        this.snakeDirection = Direction.Down;
+                        break;
+                    case PlayerRequest.Right:
+                        this.snakeDirection = Direction.Right;
+                        break;
+                    case PlayerRequest.Pause:
+                        gamePaused = !gamePaused;
+                        break;
+                    case PlayerRequest.Exit:
+                        TerminateApplication();
+                        throw new Exception("Termination failed");
+                }
             }
         }
 
