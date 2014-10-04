@@ -28,6 +28,9 @@
     <Content Include="ModelDefinition\Package1_1722.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_2329.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package2_1444.uml">
       <SubType>Content</SubType>
     </Content>
@@ -53,6 +56,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1722.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2329.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UMLSnakUnmessClassDiagram.classdiagram">

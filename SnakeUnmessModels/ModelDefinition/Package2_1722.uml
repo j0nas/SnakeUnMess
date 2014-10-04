@@ -21,7 +21,7 @@
         <referencesInternal>
           <reference
             Id="10d2df90-1aff-417b-8fbf-2a71da2b3c61"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -158,7 +158,7 @@
             <referencesInternal>
               <reference
                 Id="3c98369c-34e3-4b27-aac5-45b08d6751c4"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DHeight"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DHeight"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -238,7 +238,7 @@
             <referencesInternal>
               <reference
                 Id="75d01790-d7f0-4961-9a5c-ade48bef38e4"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DWidth"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DWidth"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -318,7 +318,7 @@
             <referencesInternal>
               <reference
                 Id="f4b9ef2a-17e3-41a9-a816-310f3f457dc9"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DRectangle"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DRectangle"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -385,73 +385,374 @@
                 LastKnownLocation="Package2_1444.uml" />
             </type_NamedElement>
           </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="dcc6ee41-1348-44ab-975b-36af6510e950"
-            name="ConsoleGameWindow"
+          <property
+            Id="52ccad7b-d205-456c-9eb8-bfc40b25fdb2"
+            name="SnakeBodyRepresentationChar"
+            visibility="Private"
             isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
             <referencesInternal>
               <reference
-                Id="c9223bb8-548b-4f71-9dcd-42cba1d60b0f"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D.ctor"
+                Id="a428442d-b4e4-4cba-a549-750a72159028"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DSnakeBodyRepresentationChar"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="4ca6f34f-11ff-440d-8a78-ddd112737f91"
-                name="method"
+                Id="eefc9b72-8d66-4898-b5a6-e4d4a7f4aff2"
+                name="field"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="45db9893-0fc2-4619-83cf-a8cb6dd98dcc">
+                    Id="b0da0cd6-9b1f-46e4-a886-e16c93af4a50">
                     <propertyInstance
-                      Id="76090ed3-2a92-4183-ba08-f591077ed1aa"
+                      Id="d30495b7-f56a-4421-9898-b490f5424c6b"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d0cc9104-0779-4477-9191-57d96367608b">
+                    Id="57fb81eb-ca0e-4616-968d-18b57925b4d1">
                     <propertyInstance
-                      Id="b3761776-9687-480d-8b2e-c08abb55c992"
-                      name="IsPartial"
+                      Id="4bae0508-4354-4607-814a-4c0df674918a"
+                      name="IsConst"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e6c621f4-2cbe-4487-9855-a318a19c9e03">
+                    Id="a3a58056-3e79-4947-b985-aa1a0575b5cd">
                     <propertyInstance
-                      Id="7cc01d7d-eff3-419f-933e-03ed35af40e9"
-                      name="IsUnsafe"
+                      Id="0e59da41-f97a-4295-b5a6-8a494f1ec3b2"
+                      name="IsNullable"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="54d5a773-29db-4c77-901a-1e2a19f0efc7">
+                    Id="462f8ecc-6883-4690-a9ff-a568a29d9160">
                     <propertyInstance
-                      Id="0c01c9f8-f818-4275-a1c5-7db73ad8b9fa"
-                      name="Inheritance"
-                      value="none" />
+                      Id="1cc125a1-eed7-4451-b437-ba7c001ad9e9"
+                      name="IsVolatile"
+                      value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f473d187-484f-469b-a043-eaf79bc18aa0">
+                    Id="60a396a3-e081-445f-b063-179bb2a5f28c">
                     <propertyInstance
-                      Id="21bee952-52b3-4d67-892e-85d75f802f2c"
+                      Id="27477007-2568-471a-acc6-73f6a58f8786"
                       name="PackageVisibility"
                       value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="91ef90ed-eb12-41a5-a36d-a797d0101f38">
-                    <propertyInstance
-                      Id="e22256d8-f6f5-43b8-ac97-06496e3efad2"
-                      name="params"
-                      value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
-          </operation>
+          </property>
+          <property
+            Id="7ff432d0-075c-4d21-b60b-d86da35b7a6e"
+            name="SnakeHeadRepresentationChar"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3e81bd98-c56e-4656-9baf-aebbcd8177b1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DSnakeHeadRepresentationChar"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1ca5991f-d2d3-448c-ad65-6e6afa14e8a8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ba7b7c6-2279-4a3b-a680-056294cb86de">
+                    <propertyInstance
+                      Id="36ba87bb-1a58-456c-893e-b759b102e15b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e9854b3-3d55-4ac8-aa30-a64dd7557237">
+                    <propertyInstance
+                      Id="b69d4fc4-715f-4c3e-802d-b5b5852779ce"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec5bfcce-4baa-49d6-999b-9e76a53c4ff6">
+                    <propertyInstance
+                      Id="2f907260-dc55-4a44-85b8-7bff8fbd23d5"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1cc1e7c8-f32c-4784-b0bd-f2713a84990a">
+                    <propertyInstance
+                      Id="5178bb82-8c21-4af0-b40f-2ee723d4947c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bf0a689-40e4-43f4-80dc-38deefe738c0">
+                    <propertyInstance
+                      Id="afe53504-c693-45c0-91b5-39ab4eb53203"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="eaad2892-7428-4c9c-a486-13676244afc8"
+            name="SnakeHeadColor"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a09b1926-1743-4645-9b5f-8e61eb98af84"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DSnakeHeadColor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8e2c6c37-6e67-4fad-886d-3931e8373d77"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab63bb7d-a46f-4440-b0ad-da57a498f805">
+                    <propertyInstance
+                      Id="def5d734-3d8c-46e6-a41d-ce1d1a412d44"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9210a8cb-f5b5-4a48-a807-9cad3f26af6f">
+                    <propertyInstance
+                      Id="6ce00985-1892-4d22-a230-90173cd8cc2b"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c51fb628-3e6c-4d15-8c3e-d9b29a185769">
+                    <propertyInstance
+                      Id="dc627ab0-5c4d-4501-80f8-e4615a82488b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68cb8398-c669-40c0-82fd-04925c6cef2e">
+                    <propertyInstance
+                      Id="7acdc486-28e9-475b-bf2c-e58e172ae764"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc9c129f-61e7-472c-a33d-db9a070fdba8">
+                    <propertyInstance
+                      Id="03d5544e-d96a-46ff-9796-9c63774a0231"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="1572a33a-5fa9-4482-8203-b0fa7c303dc9"
+            name="SnakeBodyColor"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ac8d3b9e-1cc9-4151-b36c-801975d50e53"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DSnakeBodyColor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aaa15fa7-c483-46e6-8b0a-c02561b4a0a4"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f530280a-cda4-4b38-90f1-cdf1df47f390">
+                    <propertyInstance
+                      Id="93e9643a-f4ae-4f5b-bdb1-67f47ae8cdec"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3696c15-08c3-45cb-95ad-0eca41302336">
+                    <propertyInstance
+                      Id="24e5fee5-f9cc-4b31-84f0-42a40cd7fecd"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d119dce-10f3-4703-b1bc-c599ca021b03">
+                    <propertyInstance
+                      Id="cce6eba5-7a20-4c0e-a397-34ac1692a4cb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dfc0794-85a4-4e9e-a259-fd199ca4d0d5">
+                    <propertyInstance
+                      Id="dad88992-883e-49b8-9e63-2581f5a51e41"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edfb35af-f8f5-4854-89be-58645427195e">
+                    <propertyInstance
+                      Id="8966dacf-1f71-4cf1-bd4b-3d3d40e9556a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="2ca7340d-439b-4b3b-b468-169f23bde63c"
+            name="FoodItemRepresentationChar"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bd377e8c-b1e1-4b12-ba97-99ada7cfb819"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DFoodItemRepresentationChar"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="86ee2b73-809f-43ed-ae04-67b17fbae662"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0085429b-2593-4728-addd-19f5fd31292f">
+                    <propertyInstance
+                      Id="9d700cec-026c-4468-8b8f-82b3611c6e10"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da1e5819-758b-4db7-abf7-ac053d632232">
+                    <propertyInstance
+                      Id="a9e9356c-bfff-474e-8f68-ec609085904a"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e2874c1-1ba5-4f0d-b25f-6636fbd65246">
+                    <propertyInstance
+                      Id="4b1c07a6-8a4d-461a-998d-a48642a91f64"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f01f125-47dc-4678-9262-ed16ea324810">
+                    <propertyInstance
+                      Id="aaf16013-9661-4b57-8b60-b93a476883be"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13b0aed6-1688-4de4-b3f5-5846805201a0">
+                    <propertyInstance
+                      Id="d57c21fb-d15e-493d-9de8-3a987e965050"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="2087b2cd-daff-4fef-89ac-328de76035f9"
+            name="FoodItemColor"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f08cee19-e986-4f9b-8d17-402e8257c723"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DFoodItemColor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ea3a564a-e7f8-437f-aaa9-90f252704d87"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ab2d3bd-4837-4616-a6f5-b4bf754af3c3">
+                    <propertyInstance
+                      Id="f788932e-86f9-4d73-bda1-9d706aa98ac2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5044a4ec-fea4-4304-855a-02f44fbec881">
+                    <propertyInstance
+                      Id="e6b2e474-164b-49cd-8fc7-fcd1f1c67c43"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2154947-39a2-44ac-ae8f-447fe5515772">
+                    <propertyInstance
+                      Id="6ffaf403-79e7-4ea6-9763-69fae035ed30"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="486aec00-8f72-4cb5-b97d-e3201e91d140">
+                    <propertyInstance
+                      Id="b17b7b36-3e7a-401d-b9c2-b3fa3a62a597"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5638748-b4f4-4839-beb4-a0d8f3f75994">
+                    <propertyInstance
+                      Id="eb67d1e0-e4d6-4661-9ae8-1bf45019775e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
           <operation
             Id="03700b76-4290-4b7d-ad40-77d510b8bdb5"
             name="Clear"
@@ -463,7 +764,7 @@
             <referencesInternal>
               <reference
                 Id="ce216e12-8c95-4894-a3b0-17f9764b0c86"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DClear"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3DClear"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -518,7 +819,7 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="d340449f-730b-4648-8b35-9df4cfa61261"
+            Id="68089a3f-3229-4647-90c7-243700cd5715"
             name="DrawObject"
             isLeaf="false"
             isStatic="false"
@@ -527,54 +828,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="5ff02d69-3ace-4f3f-9be3-7b7247f4c7e2"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D(Name%3DDrawObject OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DConsoleColor)])"
+                Id="91a5915b-67fe-4f43-8a00-1d7b096d0e95"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D(Name%3DDrawObject OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements Type%3DGameObjectType)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="ef401972-3ecd-470f-8833-e6443458ed04"
+                Id="ac070041-6a78-45d4-8601-12ab9d2e6523"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c679ebf5-c263-4a5d-a815-7a0dae715f7b">
+                    Id="26dcfb3e-5591-4cc0-9d19-bc635887854a">
                     <propertyInstance
-                      Id="42cd6fbb-9aa6-46d5-afb4-ff51343f5cb8"
+                      Id="7e0fc0c2-9405-4b2b-9e16-46232f81ddb8"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="29c693a1-25f3-4b02-b2a0-aacd8a26882e">
+                    Id="63a5fe95-c273-4953-a143-00c75c53e592">
                     <propertyInstance
-                      Id="6cc12ee1-3c04-403e-9649-bd560e636394"
+                      Id="2ff63b1a-3367-4113-891a-f8f0086e6f1b"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3d99dce8-43e0-48a2-8fef-4c72cab8ba12">
+                    Id="42434354-e4fb-4ff8-b07a-479e91f98974">
                     <propertyInstance
-                      Id="4bd27b3d-f89a-42ba-b70c-c5f6e397d725"
+                      Id="ba94ec22-d21b-4d49-a4cd-ed6f6c4115f0"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="de68419d-1229-4e20-96e3-8aa201da28f2">
+                    Id="9d73fe50-d8fa-4ac7-bca0-94e9053af84a">
                     <propertyInstance
-                      Id="e2b6f0da-b8bc-4fa0-b1bc-a0a8c7f085bb"
+                      Id="3110cd2d-522a-4210-8026-7d431c8ddf16"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="64359ced-bb3b-46e1-8480-195187db1588">
+                    Id="45a9021b-57d8-41a6-b9f5-d4fc85301bd4">
                     <propertyInstance
-                      Id="d6971407-3a22-48b5-bd68-12d1d7d6c34c"
+                      Id="cbb79ca5-337c-4434-860d-22c496325d25"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="da61e41b-1833-4ed5-ae40-3782abd02a29">
+                    Id="9e25c7e2-6d2f-4d71-9b5e-cc39052050f4">
                     <propertyInstance
-                      Id="32aa8375-990e-4e2f-824d-8252281b5c46"
+                      Id="c9c2bd3c-ff38-4937-aa8f-bedcb2af333d"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -584,13 +885,13 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="7be2c25e-108e-42ab-85a7-4679965d0efb"
+                  Id="cc63fb69-e3e4-487f-8f53-a329424af559"
                   name="o"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="8fdcc85a-7de6-482c-a9e0-7f56a8c58412"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D(Name%3DDrawObject OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DConsoleColor)]) ParameterIdentifier%3Do"
+                      Id="5e264515-b5fc-4034-b5c4-da3ccf82f67f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D(Name%3DDrawObject OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements Type%3DGameObjectType)]) ParameterIdentifier%3Do"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -603,43 +904,89 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="77569ad3-cf91-4f89-85e2-4f2ff72c7dcc"
-                  name="representationChar"
+                  Id="b3900d26-c191-4545-8eb7-8a25bfebf2b6"
+                  name="type"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="afcb2f11-7cef-459d-9759-8e06a4894b2c"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D(Name%3DDrawObject OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DConsoleColor)]) ParameterIdentifier%3DrepresentationChar"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="301c15d1-d1c8-4761-81bd-7a849c0dc4d8"
-                      LastKnownName="Char"
-                      LastKnownLocation="Package1_1444.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="24ab303d-3504-458c-90c2-b100cf2bdb3b"
-                  name="representationColor"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="407f80c3-2167-416d-bccc-86d9b7b07a30"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D(Name%3DDrawObject OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DConsoleColor)]) ParameterIdentifier%3DrepresentationColor"
+                      Id="c7b00ffc-c71b-4e1f-9656-ee11ef04be02"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D(Name%3DDrawObject OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Elements Type%3DGameObjectType)]) ParameterIdentifier%3Dtype"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
                     <enumerationMoniker
-                      Id="61ced95d-7799-4f2a-b0b8-fc17692a45b6"
-                      LastKnownName="ConsoleColor"
-                      LastKnownLocation="Package1_1444.uml" />
+                      Id="e3843e2b-bdbc-4184-8d8d-8cf1d58dc040"
+                      LastKnownName="GameObjectType"
+                      LastKnownLocation="Package1_1722.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+          <operation
+            Id="ec58f1d4-12de-48f3-bc45-991693a470ff"
+            name="ConsoleGameWindow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="42e20fe8-6db1-4285-be2d-c73ce458f063"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameWindow Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="617ba85a-5cca-48a0-bf29-8a465e16d0fa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54ca19dc-df08-48f4-9d3a-9a9fcbba29c4">
+                    <propertyInstance
+                      Id="ea9ff426-218f-4f9f-a06a-6169e40771c1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6582d936-9899-4f83-85f7-85d56a47ba3a">
+                    <propertyInstance
+                      Id="b547e71a-b189-4288-adf5-31d68dbade60"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a74149b5-0332-4f02-9c10-25f7bb4511c0">
+                    <propertyInstance
+                      Id="3d27948c-a05c-4548-a05c-433c2950ed84"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9ffdd5f-f8ce-4e6b-98df-530a3116861e">
+                    <propertyInstance
+                      Id="ef808bf3-cb6a-453a-86ef-63b387db835d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d069454-416e-4fe3-b19a-b12e8f3fdd92">
+                    <propertyInstance
+                      Id="e78ab756-f6a9-4acf-accf-b27ad2cfef09"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4b4ff26-cc57-41fe-91f0-f5441c04979d">
+                    <propertyInstance
+                      Id="c1fc432d-09be-4200-8600-ce15cea07d60"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -654,7 +1001,7 @@
         <referencesInternal>
           <reference
             Id="c05ca4db-3274-4176-b149-07d87eb5dc2e"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -791,7 +1138,7 @@
             <referencesInternal>
               <reference
                 Id="8b3205f1-29ea-4157-8612-9dc54572a8a1"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice Member%3DKeyAvailable"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice Member%3DKeyAvailable"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -871,7 +1218,7 @@
             <referencesInternal>
               <reference
                 Id="988c8621-4f66-476d-adfe-067aecf3e18c"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice Member%3DPlayerRequest"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice Member%3DPlayerRequest"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -941,7 +1288,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="ac3fefce-b07a-4acb-9231-a5f4af7bc1bb"
+            Id="241d4cf8-f10f-498f-baf9-3eba3dcfa5f9"
             name="ConsoleInputDevice"
             isLeaf="false"
             isStatic="false"
@@ -950,60 +1297,530 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="025029b5-1f28-44fd-888f-b4d8f78f71a0"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fjonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice Member%3D.ctor"
+                Id="de4a99eb-7d9d-479e-8e03-e855d0aa644d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleInputDevice Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="42c2e408-7ed3-4adf-b68a-aeb024498e2c"
+                Id="932cd7c6-c8ab-4697-bfb3-d562c2bfd4e7"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7052ac18-4a57-4a7a-bcae-37712e2df244">
+                    Id="236a8477-a347-4349-b52a-c0ad36208466">
                     <propertyInstance
-                      Id="fcefd8c5-4c73-4174-9608-659d80c775da"
+                      Id="ef615a6c-5c0d-4871-9e7e-9dcc6b285725"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="34148412-e842-4394-8294-0658edc0eeaa">
+                    Id="8c3a42f3-e265-4826-94f7-af2b0bf20820">
                     <propertyInstance
-                      Id="2afe7841-a043-472e-9077-32129b17aaee"
+                      Id="c4b3c460-9d05-46ad-9c66-e6e669dd4048"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8ac5861e-ccf8-4d1f-b29e-04db97fa1f81">
+                    Id="a56a322c-dd2a-4d45-b2d8-d2983d8ceb78">
                     <propertyInstance
-                      Id="523b2512-eec5-4b51-9b26-b084d2f42621"
+                      Id="b0da71df-881e-4e1c-ae89-2db0fc1d6f98"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="dbd0b503-8a7d-4f79-841f-ba5630586755">
+                    Id="3870939b-8bcc-43d7-b2fe-585a909cdf34">
                     <propertyInstance
-                      Id="05f3bd47-7d4d-46ed-8b27-353ffc3d6123"
+                      Id="a0cf86c2-735d-4fe3-b19f-2234079a6e64"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="465fcfb2-ee06-4221-9928-2d03a84e61a5">
+                    Id="89394398-e150-4669-9f5e-a9ebb444f436">
                     <propertyInstance
-                      Id="163706f4-382d-4cfa-bd56-faf9419ef93a"
+                      Id="7179fb62-b6d9-44d8-b7dc-37e5e1d3d522"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3af2fcf0-e1b2-4f2d-91f2-6d857f97fe63">
+                    Id="30b86d48-eaec-4c87-8258-7b2856205467">
                     <propertyInstance
-                      Id="325b3ff9-2a56-455a-b585-0ef211fcc240"
+                      Id="8513fa55-0948-4c52-938e-3afe7caf3cb8"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="96adfe95-c743-47fe-884e-24d36773ef2f"
+        name="ConsoleGameClient"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0b87d91f-4d05-44a7-b192-aa51fbde4024"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameClient"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="327d6394-c908-4002-a135-ed92f40f0912"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="131f3077-46b4-44ed-a98f-5fbf8cafe5a4">
+                <propertyInstance
+                  Id="120314d4-48a6-4e12-b557-85cd5f2b8e46"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f9ebcfb-6f18-4169-9749-19d091e00af1">
+                <propertyInstance
+                  Id="1da9febb-7711-46c0-a744-2a326dc5a432"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a29ec4a2-9ad3-4eb7-b50f-cf824801a8d3">
+                <propertyInstance
+                  Id="aef8a3d0-6867-4829-921e-40dcbb4342be"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9a553d3c-6131-43ba-9013-00d283c2689d">
+                <propertyInstance
+                  Id="22991e09-8d73-4ea1-9af6-9f5c318d6c74"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ecd033c9-5bd6-4350-9c31-90b3a441f156">
+                <propertyInstance
+                  Id="45f8e994-3198-4b99-9430-dcd067ae107b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f43bc691-1571-4e5f-9154-0b30a31f88f7">
+            <interfaceMoniker
+              Id="e182ff49-63ee-4eda-9230-34ec930404b5"
+              LastKnownName="IGameClient"
+              LastKnownLocation="Package3_1722.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="eaa23293-feac-4387-88a7-09784af23f49"
+            isDerived="false"
+            sourceEndRoleName="ConsoleGameClient"
+            targetEndRoleName="GameWindow"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="5f2dda6e-78e0-4c72-b3d3-267e9d2d7ad1"
+              LastKnownName="IGameWindow"
+              LastKnownLocation="Package3_1722.uml" />
+            <description>Property GameWindow references type IGameWindow.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="38b42918-f99c-4299-a166-f239e8516899"
+                  name="ConsoleGameClient"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a277e785-ab38-4914-9a93-2be4d7d6d62f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bf9c4173-8c1a-4659-bfc7-50e7279a172a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ad65b3a-b09f-499d-bee4-bb6c6312fcf9"
+                  name="GameWindow"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f51e96a9-75f4-4fee-91b1-ddb27daf0452"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="042b0c09-3143-4ed4-b230-1aa9a41029dd"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6b6de13a-d466-4da4-b07a-c184a8ae42e4"
+            isDerived="false"
+            sourceEndRoleName="ConsoleGameClient"
+            targetEndRoleName="InputDevice"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="b5886618-0244-4f45-8ae9-d72635330a9b"
+              LastKnownName="IInputDevice"
+              LastKnownLocation="Package3_1722.uml" />
+            <description>Property InputDevice references type IInputDevice.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="74a1cedf-b907-4ac4-9f5d-39bd5a5d43cd"
+                  name="ConsoleGameClient"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7da3ed21-3d27-49bd-b811-c54215c39150"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4992d731-d007-4915-b2aa-5af4cef3ad20"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f6e209f3-27b3-4908-8920-9f0a2103c6e1"
+                  name="InputDevice"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bf576a86-b52e-4a86-a743-a6f632ae49a3"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b7781846-f9eb-437c-8ab1-7571d97e9419"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="88d69b38-6993-490f-a6ba-5c45e3b1161a"
+            name="GameWindow"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8144a4bd-6840-47e4-8621-0b24ab985ef1"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameClient Member%3DGameWindow"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2ab79e83-f8a9-4454-a8df-078afc88818b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6cbd7ac-a1f1-419a-8be2-aa4ceb62e1aa">
+                    <propertyInstance
+                      Id="3ca11b79-5af7-47b3-a277-12704ec3539c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aeaacc1b-321a-4b50-aa90-a643dbc3116e">
+                    <propertyInstance
+                      Id="dcd526b6-88c0-4232-8405-6dc82a3dfd0d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="728580d4-282c-4ec8-873b-1661f70ef350">
+                    <propertyInstance
+                      Id="8d4ada90-9efd-4432-a1b3-2b5e96bd3cac"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa56662c-ed59-4e01-93dd-53117f00537f">
+                    <propertyInstance
+                      Id="31f241bc-c263-46f7-8597-5b90f80bc464"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fded88f6-9165-4a9b-981c-5156c5d7c80f">
+                    <propertyInstance
+                      Id="2c4f5e9c-987f-40b3-8421-ebeeaacaeb3e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="549cf144-26eb-4ce3-b713-96eb586ee049">
+                    <propertyInstance
+                      Id="20d1a511-3677-4d36-b4ad-8e4104742263"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e9a2e07-142e-4176-a431-57c0c12e4164">
+                    <propertyInstance
+                      Id="58389600-450c-4ab4-a764-1cc14d6b0416"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="5f2dda6e-78e0-4c72-b3d3-267e9d2d7ad1"
+                LastKnownName="IGameWindow"
+                LastKnownLocation="Package3_1722.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a6498716-5e56-49af-ad8a-86da8f1d4e8a"
+            name="InputDevice"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="38109d23-bfdb-4b5f-a1c0-2e819599ab3e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameClient Member%3DInputDevice"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="30e7a419-bc06-4e31-9052-934bdb6a2311"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29cbaddf-d6ad-46b0-94ab-8563bc4cfcbd">
+                    <propertyInstance
+                      Id="61074528-d75f-47bc-a26e-5b4ddb16b88f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6bde225-6c3a-43d9-bb22-36d620be2875">
+                    <propertyInstance
+                      Id="d3256cfd-fcec-44a5-891c-1a7430f46213"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="692446d5-4ca4-4aec-8180-43c9ce874dab">
+                    <propertyInstance
+                      Id="2c348eed-5757-4937-8455-14025c52cc4b"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f652b6cc-3f10-40b3-9918-57b6961a6bf3">
+                    <propertyInstance
+                      Id="7bebc7e3-532d-4fee-9f8c-44db5423275f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecbc3f72-2c9c-441e-8934-4496e6c660d5">
+                    <propertyInstance
+                      Id="0ad59d27-7c07-4f21-9a05-995eef60d06f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5893b74-9e28-4ae6-85b5-b91efa6cea7e">
+                    <propertyInstance
+                      Id="18efb0aa-885f-47c4-92fc-f28e2917fff5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f7004a1-ee9c-436c-bbc2-5339ecc629b4">
+                    <propertyInstance
+                      Id="2831c29b-a65a-4876-9a49-161d38e338b0"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="b5886618-0244-4f45-8ae9-d72635330a9b"
+                LastKnownName="IInputDevice"
+                LastKnownLocation="Package3_1722.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c5e4a6d6-8170-4945-87be-b906169a41f8"
+            name="ConsoleGameClient"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4306d52a-7854-4871-ad56-8eccd1fb1d78"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Interfaces Type%3DIGameWindow)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Interfaces Type%3DIInputDevice)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fe1b1abe-8ed6-43bf-9c62-9dab33248ad6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a97612cf-210a-440e-a2c6-0dd1a4f074bc">
+                    <propertyInstance
+                      Id="2607195f-a208-4f99-8c9a-728f4d9e2038"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3069667-faa5-4fbc-a7f6-12b33b2ab979">
+                    <propertyInstance
+                      Id="232a8d8a-01e2-4c46-9a55-cbb34c17261e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41bb1712-85ec-4f81-8b98-d1f37fd8848c">
+                    <propertyInstance
+                      Id="891b6333-79a2-406c-b8f9-bb60c49c1ae9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0f3f952-bb21-42bd-bd5e-cc9e84b0abdc">
+                    <propertyInstance
+                      Id="9645cfc3-4c93-4b8a-aede-abc84d00026c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73fa0be1-d70d-48cb-a5e0-bf1616b53628">
+                    <propertyInstance
+                      Id="1fbd7690-bc2f-497a-b983-3667414ca524"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45384b2e-a36e-4dd9-b3bb-75c38c1607ee">
+                    <propertyInstance
+                      Id="a513bcb3-f31b-4591-8a3d-1cb43e06c8ea"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="68ca1c65-9409-4537-80a8-d6bae0eb5698"
+                  name="gameWindow"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d5decc78-ef8d-4416-a5fa-75ad96fb1642"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Interfaces Type%3DIGameWindow)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Interfaces Type%3DIInputDevice)]) ParameterIdentifier%3DgameWindow"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="5f2dda6e-78e0-4c72-b3d3-267e9d2d7ad1"
+                      LastKnownName="IGameWindow"
+                      LastKnownLocation="Package3_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c00d7af9-a3ce-4d22-8351-7b7585484551"
+                  name="inputDevice"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="22d89324-aab0-4162-ad6f-25fed8232b32"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Console Type%3DConsoleGameClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Interfaces Type%3DIGameWindow)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess.Interfaces Type%3DIInputDevice)]) ParameterIdentifier%3DinputDevice"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b5886618-0244-4f45-8ae9-d72635330a9b"
+                      LastKnownName="IInputDevice"
+                      LastKnownLocation="Package3_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
