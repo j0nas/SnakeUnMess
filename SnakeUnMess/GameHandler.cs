@@ -64,7 +64,7 @@
 
         private bool SnakeMovedLegally()
         {
-            var nextPosition = player.Snake.NextMovePoint(snakeDirection);
+            var nextPosition = player.Snake.GetNextMovePoint(snakeDirection);
 
             // If next move is invalid because Snake either touches edges or itself ..
             // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    

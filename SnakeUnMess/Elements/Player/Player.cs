@@ -16,7 +16,7 @@
 
         public int Score { get; private set; }
 
-        public void Scored(int scoreValue)
+        public void ScoreChange(int scoreValue)
         {
             this.Score += scoreValue;
             this.Snake.Extend();
