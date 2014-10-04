@@ -12,22 +12,22 @@
     using SnakeUnMess.Global;
     using SnakeUnMess.Interfaces;
 
-    public static class GameHandler
+    public class GameHandler
     {
         private const int FramesPerSecond = 10;
 
-        private const char SnakeBodyRepresentationChar = 'O';
-        private const char SnakeHeadRepresentationChar = '@';
-        private const ConsoleColor SnakeHeadColor = ConsoleColor.Green;
-        private const ConsoleColor SnakeBodyColor = ConsoleColor.Green;
+        private const char SnakeBodyRepresentationChar = 'O'; // TODO
+        private const char SnakeHeadRepresentationChar = '@'; // TODO
+        private const ConsoleColor SnakeHeadColor = ConsoleColor.Green; // TODO
+        private const ConsoleColor SnakeBodyColor = ConsoleColor.Green; // TODO
 
-        private const char FoodItemRepresentationChar = '$';
-        private const ConsoleColor FoodItemColor = ConsoleColor.Red;
+        private const char FoodItemRepresentationChar = '$'; // TODO
+        private const ConsoleColor FoodItemColor = ConsoleColor.Red; // TODO
         private const int FoodItemValue = 10;
 
         private static readonly Point PlayerStartingPoint = new Point(10, 10);
 
-        public static void Start(IGameClient gameClient)
+        public void Start(IGameClient gameClient)
         {
             var player = new Player(PlayerStartingPoint);
             var gameOver = false;
@@ -76,13 +76,13 @@
 
                     // If next move is invalid because Snake either touches edges or itself ..
                     // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
-                    gameOver = !(gameClient.GameWindow.Rectangle.Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Point.Equals(nextMovePoint)));
+                    gameOver = !(gameClient.GameWindow.Rectangle.Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Point.Equals(nextMovePoint))); // TODO extract into methods?
                     if (!gameOver)
                     {
                         player.Snake.Move(nextMovePoint);
 
                         // If no more place to spawn food ..
-                        gameOver = FoodCheck(player, ref foodItem, gameClient.GameWindow);
+                        gameOver = this.FoodHasBeenEaten(player, ref foodItem, gameClient.GameWindow);
                     }
 
                     // Render
@@ -104,12 +104,12 @@
             }
         }
 
-        private static void TerminateApplication()
+        private void TerminateApplication()
         {
-            Environment.Exit(exitCode: 0);
+            Environment.Exit(0);
         }
 
-        private static bool FoodCheck(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
+        private bool FoodHasBeenEaten(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
         {
             // If player's snake's headCoord collides with foodItem.. 
             if (player.Snake.HeadPoint.Equals(foodItem.Point))
@@ -128,7 +128,7 @@
             return false;
         }
 
-        private static void PlaceFood(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
+        private void PlaceFood(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
         {
             Point foodSpawnPoint;
             do
@@ -137,6 +137,7 @@
                 foodSpawnPoint = GlobalUtilities.RandomPoint(gameWindow.Width, gameWindow.Height);
             }
             while (player.Snake.Parts.Any(part => part.Point.Equals(foodSpawnPoint)));
+
             foodItem = new FoodItem(foodSpawnPoint, foodItem.ScoreValue);
         }
     }
