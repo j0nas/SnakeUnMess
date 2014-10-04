@@ -2,12 +2,14 @@
 {
     using System;
     using System.Diagnostics;
+    using System.Drawing;
+    using System.Linq;
     using System.Threading;
 
     public class GameHandler
     {
         // TODO externalize into config file
-        private const int FramesPerSecond = 2;
+        private const int FramesPerSecond = 10;
         private const int FoodItemValue = 10;
         private const char SnakeBodyRepresentationChar = 'O';
         private const char SnakeHeadRepresentationChar = '@';
@@ -15,17 +17,14 @@
         private const ConsoleColor SnakeBodyColor = ConsoleColor.Green;
         private const char FoodItemRepresentationChar = '$';
         private const ConsoleColor FoodItemColor = ConsoleColor.Red;
-        private bool gamePaused = false;
+        private bool gamePaused;
 
         public void Start(IGameWindow gameWindow, IInputDevice inputDevice)
         {
-            var player = new Player(new Coordinate(10, 10));
+            var player = new Player(new Point(10, 10));
             var gameOver = false;
             var snakeDirection = Direction.Right;
-            var foodItem = new FoodItem(
-                FoodItemValue,
-                GlobalUtilities.RandomCoordinate(gameWindow.Width - 1, gameWindow.Height - 1));
-
+            var foodItem = new FoodItem(GlobalUtilities.RandomPoint(gameWindow.Width, gameWindow.Height), FoodItemValue);
             var frameTimer = new Stopwatch();
             frameTimer.Start();
 
@@ -52,67 +51,66 @@
                             gamePaused = !gamePaused;
                             break;
                         case UserRequest.Exit:
-                            this.TerminateApplication();
+                            TerminateApplication();
                             throw new Exception("Termination failed");
                     }
                 }
 
                 if (!gamePaused)
                 {
-                    // Change world
-                    player.MoveSnake(snakeDirection);
+                    // Change world                    
+                    var nextMovePoint = player.Snake.NextMovePoint(snakeDirection);
 
-                    // If player's snake touches the edges of the console gameWindow, eats itself or no more place to spawn food ..
-                    gameOver = PlayerCollided(player.Snake.HeadCoordinate, gameWindow)
-                               || FoodCheck(player, ref foodItem, gameWindow) || player.SnakeSelfCollided();
+                    // If next move is invalid because Snake either touches edges or itself ..
+                    // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
+                    gameOver = !(gameWindow.GetRectangle().Contains(nextMovePoint) && !player.Snake.Parts.Any(part => part.Point.Equals(nextMovePoint)));
+                    if (!gameOver)
+                    {
+                        player.Snake.Move(nextMovePoint);
+
+                        // If no more place to spawn food ..
+                        gameOver = FoodCheck(player, ref foodItem, gameWindow);
+                    }
 
                     // Render
                     gameWindow.Clear();
-
                     foreach (var part in player.Snake.Parts)
                     {
                         gameWindow.DrawObject(
-                            part.Coordinate,
+                            part.Point,
                             part.IsHead ? SnakeHeadRepresentationChar : SnakeBodyRepresentationChar,
                             part.IsHead ? SnakeHeadColor : SnakeBodyColor);
                     }
 
-                    gameWindow.DrawObject(foodItem.Coordinate, FoodItemRepresentationChar, FoodItemColor);
+                    gameWindow.DrawObject(foodItem.Point, FoodItemRepresentationChar, FoodItemColor);
                 }
 
-                // Ensuring 100ms per frame, idle for the remainder of the timeframe.
+                // Ensuring idletime for framerate consistency.
                 Thread.Sleep(Math.Max((1000 / FramesPerSecond) - (int)frameTimer.ElapsedMilliseconds, 0));
                 frameTimer.Reset();
             }
         }
 
-        private void TerminateApplication()
+        private static void TerminateApplication()
         {
             Environment.Exit(exitCode: 0);
         }
 
         private bool FoodCheck(Player player, ref FoodItem foodItem, IGameWindow gameWindow)
         {
-            if (GlobalUtilities.MatchingCoordinates(player.Snake.HeadCoordinate, foodItem.Coordinate))
+            if (player.Snake.HeadPoint.Equals(foodItem.Point))
             {
                 player.AteFood(foodItem.ScoreValue);
-                foodItem = new FoodItem(
-                    foodItem.ScoreValue,
-                    GlobalUtilities.RandomCoordinate(gameWindow.Width - 1, gameWindow.Height - 1));
+                foodItem = new FoodItem(GlobalUtilities.RandomPoint(gameWindow.Width, gameWindow.Height), foodItem.ScoreValue);
 
                 if ((player.Snake.Parts.Count + 1) >= (gameWindow.Height * gameWindow.Width))
                 {
-                    // No more room to place FoodItem, GG.
+                    // No more room to place FoodItem
                     return true;
                 }
             }
 
             return false;
-        }
-
-        private bool PlayerCollided(Coordinate headCoordinate, IGameWindow gameWindow)
-        {
-            return (headCoordinate.X >= gameWindow.Width + 1) || (headCoordinate.Y >= gameWindow.Height) || (headCoordinate.X <= 0) || (headCoordinate.Y <= 0);
         }
     }
 }

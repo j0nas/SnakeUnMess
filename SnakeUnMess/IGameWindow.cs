@@ -1,6 +1,7 @@
 ﻿namespace SnakeUnMess
 {
     using System;
+    using System.Drawing;
 
     public interface IGameWindow
     {
@@ -8,8 +9,10 @@
 
         int Width { get; }
 
+        Rectangle GetRectangle();
+
         void Clear();
 
-        void DrawObject(Coordinate o, char representationChar, ConsoleColor representationColor);
+        void DrawObject(Point o, char representationChar, ConsoleColor representationColor);
     }
 }

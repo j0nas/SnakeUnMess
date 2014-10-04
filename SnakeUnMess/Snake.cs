@@ -2,6 +2,7 @@ namespace SnakeUnMess
 {
     using System;
     using System.Collections.Generic;
+    using System.Drawing;
     using System.Linq;
 
     public class Snake
@@ -10,28 +11,60 @@ namespace SnakeUnMess
 
         private Direction lastDirection = Direction.Right;
 
-        private bool mustExtend = false;
+        private bool mustExtend;
 
-        public Snake(Coordinate initialHeadCoordinate, int snakeSize = DefaultSnakeSize)
+        public Snake(Point initialHeadPoint, int snakeSize = DefaultSnakeSize)
         {
-            this.HeadCoordinate = initialHeadCoordinate;
+            this.HeadPoint = initialHeadPoint;
             this.Parts = new List<SnakePart>(snakeSize);
 
 
             for (var i = 0; i < snakeSize; i++)
             {
                 this.Parts.Add(
-                    new SnakePart(new Coordinate(initialHeadCoordinate.X + i, initialHeadCoordinate.Y), false));
+                    new SnakePart(new Point(initialHeadPoint.X + i, initialHeadPoint.Y), false));
             }
         }
 
-        public Coordinate HeadCoordinate { get; private set; }
+        public Point HeadPoint { get; private set; }
 
         public List<SnakePart> Parts { get; set; }
 
-        public void Move(Direction direction)
+
+        public Point NextMovePoint(Direction desiredDirection)
         {
-            var directionIsLegal = this.DirectionLegal(direction, lastDirection);
+            if (!this.DirectionLegal(desiredDirection))
+            {
+                desiredDirection = lastDirection;
+            }
+            lastDirection = desiredDirection;
+
+            var x = this.Parts.Last().Point.X;
+            var y = this.Parts.Last().Point.Y;
+
+            switch (desiredDirection)
+            {
+                case Direction.Up:
+                    y--;
+                    break;
+                case Direction.Down:
+                    y++;
+                    break;
+                case Direction.Right:
+                    x++;
+                    break;
+                case Direction.Left:
+                    x--;
+                    break;
+            }
+
+            return new Point(x, y);
+        }
+
+        public void Move(Point point)// Direction direction)
+        {
+            /*
+            var directionIsLegal = this.DirectionLegal(direction);
 
             if (!directionIsLegal)
             {
@@ -42,8 +75,8 @@ namespace SnakeUnMess
                 lastDirection = direction;
             }
 
-            var x = this.Parts.Last().Coordinate.X;
-            var y = this.Parts.Last().Coordinate.Y;
+            var x = this.Parts.Last().Point.X;
+            var y = this.Parts.Last().Point.Y;
 
             switch (direction)
             {
@@ -60,35 +93,19 @@ namespace SnakeUnMess
                     x--;
                     break;
             }
-
+            */
             // Update position property (== new position of head)
-            this.HeadCoordinate = new Coordinate(x, y);
+            this.HeadPoint = point;// new Point(x, y);
             this.Parts.Last().IsHead = false;
 
             // The new added part is the new head
-            this.Parts.Add(new SnakePart(this.HeadCoordinate, true));
-            if (this.mustExtend)
-            {
-                mustExtend = false;
-            }
-            else
+            this.Parts.Add(new SnakePart(this.HeadPoint, true));
+            if (!this.mustExtend)
             {
                 this.Parts.Remove(this.Parts.First());
             }
-        }
 
-        public bool HasSelfCollided()
-        {
-            // Since we're checking for collision with the Head (== Parts[0]), omit the head in the check.
-            for (var i = 0; i < this.Parts.Count - 1; i++)
-            {
-                if (GlobalUtilities.MatchingCoordinates(this.HeadCoordinate, this.Parts[i].Coordinate))
-                {
-                    return true;
-                }
-            }
-
-            return false;
+            this.mustExtend = false;
         }
 
         public void Extend()
@@ -96,18 +113,18 @@ namespace SnakeUnMess
             this.mustExtend = true;
         }
 
-        private bool DirectionLegal(Direction goalDirection, Direction previousDirection)
+        private bool DirectionLegal(Direction goalDirection)
         {
             switch (goalDirection)
             {
                 case Direction.Up:
-                    return previousDirection != Direction.Down;
+                    return lastDirection != Direction.Down;
                 case Direction.Down:
-                    return previousDirection != Direction.Up;
+                    return lastDirection != Direction.Up;
                 case Direction.Left:
-                    return previousDirection != Direction.Right;
+                    return lastDirection != Direction.Right;
                 case Direction.Right:
-                    return previousDirection != Direction.Left;
+                    return lastDirection != Direction.Left;
                 default:
                     throw new Exception("Illegal direction!");
             }

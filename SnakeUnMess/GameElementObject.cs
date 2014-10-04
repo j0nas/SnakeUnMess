@@ -1,7 +1,9 @@
 ﻿namespace SnakeUnMess
 {
+    using System.Drawing;
+
     public class GameElementObject
     {
-        public Coordinate Coordinate { get; set; }
+        public Point Point { get; set; }
     }
 }
