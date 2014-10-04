@@ -38,10 +38,8 @@
         public void Start()
         {
             player = new Player(PlayerStartingPoint);
-            var gameOver = false;
-
             foodItem = new FoodItem(FindNewFoodPosition(), FoodItemValue);
-
+            var gameOver = false;
             var frameTimer = new Stopwatch();
             frameTimer.Start();
 
@@ -50,13 +48,8 @@
             {
                 HandlePlayerInput();
 
-                if (this.gamePaused)
-                {
-                    continue;
-                }
-            
                 // Ensuring idletime for framerate consistency.
-                if ((int)frameTimer.ElapsedMilliseconds < 1000 / FramesPerSecond)
+                if (!(!gamePaused && !((int)frameTimer.ElapsedMilliseconds < 1000 / FramesPerSecond)))
                 {
                     continue;
                 }
@@ -64,21 +57,26 @@
                 frameTimer.Restart();
 
                 // Change world                    
-                var nextPosition = player.Snake.NextMovePoint(snakeDirection);
-
-                // If next move is invalid because Snake either touches edges or itself ..
-                // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
-                gameOver = !(PointIsWithinBounds(nextPosition) && !SnakeIsCannibal(nextPosition));
-                if (!gameOver)
-                {
-                    // TODO
-                    player.Snake.Move(nextPosition);
-
-                    HandleFoodEating();
-                }
-
+                gameOver = SnakeMovedLegally();
                 RenderElements();
             }
+        }
+
+        private bool SnakeMovedLegally()
+        {
+            var nextPosition = player.Snake.NextMovePoint(snakeDirection);
+
+            // If next move is invalid because Snake either touches edges or itself ..
+            // (Reverse &&s instead of ||s because && does not evaluate remainder of statement if part of evaluated statement is false)                    
+            var gameOver = !(PointIsWithinBounds(nextPosition) && !SnakeIsCannibal(nextPosition));
+
+            if (!gameOver)
+            {
+                player.Snake.Move(nextPosition);
+                HandleFoodEating();
+            }
+
+            return gameOver;
         }
 
         private void HandleFoodEating()
@@ -100,12 +98,12 @@
         private void RenderElements()
         {
             gameClient.GameWindow.Clear();
-            foreach (var part in this.player.Snake.Parts)
+            foreach (var part in player.Snake.Parts)
             {
-                this.gameClient.GameWindow.DrawObject(part.Position, part.Type);
+                gameClient.GameWindow.DrawObject(part.Position, part.Type);
             }
 
-            gameClient.GameWindow.DrawObject(this.foodItem.Position, GameObjectType.Food);
+            gameClient.GameWindow.DrawObject(foodItem.Position, GameObjectType.Food);
         }
 
         private bool PointIsWithinBounds(Point point)
@@ -148,8 +146,7 @@
 
         private bool SnakeFillsScreen()
         {
-            return this.player.Snake.Parts.Count + 1
-                   >= this.gameClient.GameWindow.Height * this.gameClient.GameWindow.Width;
+            return player.Snake.Parts.Count + 1 >= gameClient.GameWindow.Height * gameClient.GameWindow.Width;
         }
 
         private void TerminateApplication()
