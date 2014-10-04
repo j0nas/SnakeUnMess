@@ -31,7 +31,7 @@ namespace SnakeUnMess.Elements.Snake
         public List<SnakePart> Parts { get; set; }
 
 
-        public Point NextMovePoint(Direction desiredDirection)
+        public Point GetNextMovePoint(Direction desiredDirection)
         {
             if (!this.DirectionLegal(desiredDirection))
             {
