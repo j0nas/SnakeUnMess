@@ -1,4 +1,4 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess.Global
 {
     using System;
     using System.Drawing;

@@ -70,7 +70,7 @@ namespace SnakeUnMess.Elements.Snake
             // The new added part is the new head
             this.Parts.Add(new SnakePart(this.HeadPoint, true));
             if (!this.mustExtend)
-            { // TODO maybe optiminze this algo a bit :: already have target point, maybe init/add not needed?
+            {
                 this.Parts.Remove(this.Parts.First());
             }
 

@@ -16,7 +16,7 @@
 
         public int Score { get; private set; }
 
-        public void AteFood(int scoreValue)
+        public void Scored(int scoreValue)
         {
             this.Score += scoreValue;
             this.Snake.Extend();

@@ -1,4 +1,4 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess.Elements.FoodItem
 {
     using System.Drawing;
 

@@ -6,8 +6,10 @@
     using System.Linq;
     using System.Threading;
 
+    using SnakeUnMess.Elements.FoodItem;
     using SnakeUnMess.Elements.Player;
     using SnakeUnMess.Elements.Snake;
+    using SnakeUnMess.Global;
     using SnakeUnMess.Interfaces;
 
     public static class GameHandler
@@ -112,7 +114,7 @@
             // If player's snake's headCoord collides with foodItem.. 
             if (player.Snake.HeadPoint.Equals(foodItem.Point))
             {
-                player.AteFood(foodItem.ScoreValue);
+                player.Scored(foodItem.ScoreValue);
 
                 if ((player.Snake.Parts.Count + 1) >= (gameWindow.Height * gameWindow.Width))
                 {
