@@ -74,30 +74,38 @@
                     // TODO
                     player.Snake.Move(nextPosition);
 
-                    if (FoodHasBeenEaten())
-                    {
-                        player.Scored(foodItem.ScoreValue);
-
-                        // If no more place to spawn food ..
-                        if (SnakeFillsScreen())
-                        {
-                            TerminateApplication();
-                        }
-
-                        foodItem.Position = FindNewFoodPosition();
-                    }
+                    HandleFoodEating();
                 }
 
-                // TODO
-                // Render
-                gameClient.GameWindow.Clear();
-                foreach (var part in player.Snake.Parts)
-                {
-                    gameClient.GameWindow.DrawObject(part.Position, part.Type);
-                }
-
-                gameClient.GameWindow.DrawObject(this.foodItem.Position, GameObjectType.Food);    
+                RenderElements();
             }
+        }
+
+        private void HandleFoodEating()
+        {
+            if (FoodHasBeenEaten())
+            {
+                player.Scored(foodItem.ScoreValue);
+
+                // If no more place to spawn food ..
+                if (SnakeFillsScreen())
+                {
+                    TerminateApplication();
+                }
+
+                foodItem.Position = FindNewFoodPosition();
+            }
+        }
+
+        private void RenderElements()
+        {
+            gameClient.GameWindow.Clear();
+            foreach (var part in this.player.Snake.Parts)
+            {
+                this.gameClient.GameWindow.DrawObject(part.Position, part.Type);
+            }
+
+            gameClient.GameWindow.DrawObject(this.foodItem.Position, GameObjectType.Food);
         }
 
         private bool PointIsWithinBounds(Point point)
