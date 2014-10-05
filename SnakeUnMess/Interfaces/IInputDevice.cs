@@ -6,6 +6,6 @@
     {
         bool KeyAvailable { get; }
 
-        PlayerRequest PlayerRequest { get; }
+        PlayerRequest GetPlayerRequest { get; }
     }
 }

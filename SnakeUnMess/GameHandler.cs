@@ -120,7 +120,7 @@
         {
             if (gameClient.InputDevice.KeyAvailable)
             {
-                switch (gameClient.InputDevice.PlayerRequest)
+                switch (gameClient.InputDevice.GetPlayerRequest)
                 {
                     case PlayerRequest.Up:
                         this.snakeDirection = Direction.Up;

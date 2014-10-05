@@ -1,7 +1,6 @@
 ﻿namespace SnakeUnMess.Console
 {
     using System;
-    using System.Drawing.Printing;
 
     using SnakeUnMess.Elements.Player;
     using SnakeUnMess.Interfaces;
@@ -16,7 +15,7 @@
             }
         }
 
-        public PlayerRequest PlayerRequest
+        public PlayerRequest GetPlayerRequest
         {
             get
             {
