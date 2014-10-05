@@ -16,5 +16,7 @@
         void Clear();
 
         void DrawObject(Point o, GameObjectType type);
+
+        void DrawGameOver(int score);
     }
 }

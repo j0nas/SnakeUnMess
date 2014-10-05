@@ -60,6 +60,8 @@
                 gameOver = SnakeMovedLegally();
                 RenderElements();
             }
+
+            gameClient.GameWindow.DrawGameOver(player.Score);
         }
 
         private bool SnakeMovedLegally()

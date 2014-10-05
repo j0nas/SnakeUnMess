@@ -20,6 +20,8 @@
 
         private const ConsoleColor FoodItemColor = ConsoleColor.Red;
 
+        private const string GameOverMessage = "Game over";
+
         public ConsoleGameWindow()
         {
             Console.CursorVisible = false;
@@ -63,6 +65,19 @@
             }
 
             Console.ForegroundColor = previousForegroundColor;
+        }
+
+        public void DrawGameOver(int score)
+        {
+            var scoreMessage = "Score: " + score;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (GameOverMessage.Length / 2), Console.WindowHeight / 2);
+            Console.Write(GameOverMessage);
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (scoreMessage.Length / 2), (Console.WindowHeight / 2) + 1);
+            Console.Write(scoreMessage);
+           
+            // Not clearing the board so player can take a screenshot if s/he wants to and brag to all his/her friends.
+            Console.ReadKey(true);
         }
     }
 }
