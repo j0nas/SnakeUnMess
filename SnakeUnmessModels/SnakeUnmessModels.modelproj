@@ -68,6 +68,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLSnakUnmessClassDiagram.classdiagram</DependentUpon>
     </Content>
+    <Content Include="UMLUseCaseDiagram1.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram1.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram1.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\SnakeUnmessModels.uml">
       <SubType>Content</SubType>

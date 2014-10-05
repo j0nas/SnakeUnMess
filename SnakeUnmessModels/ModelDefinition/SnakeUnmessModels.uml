@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="54752102-f351-43f4-b680-632ba96361ac"
   name="SnakeUnmessModels" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -41,6 +41,236 @@
         Id="e48b7a88-80f1-444d-a9aa-2b444b6c3dbc"
         LastKnownName="SnakeUnMess"
         LastKnownLocation="Package_1722.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="be0ed823-b4b3-4857-a0cc-280438533181"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="c8e71489-9297-4645-88d6-e3b8df1dcf80"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Start game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e2ff3765-9c82-43d5-846f-4ea5eaa082d9"
+              LastKnownName="Start game"
+              LastKnownLocation="SnakeUnmessModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0267e85-8706-49ca-824b-71f77bade5e8"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ca8992c-255c-422b-898b-8b94ceb129a9"
+                  name="Start game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="54bb90a4-2797-4fcd-8b2b-19487121b7fb"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Pause game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e72cf377-119a-4b3e-83a8-83b15f1ae647"
+              LastKnownName="Pause game"
+              LastKnownLocation="SnakeUnmessModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="35b48e81-9608-4ab7-a18c-f819fd7a43de"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34b2dc9f-50d0-4f47-990b-4684cd84b8f3"
+                  name="Pause game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="47e46c9d-1081-4c6d-bf11-a509bb879456"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Control player's snake"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bb9bbbce-7d78-477f-b691-03f6eacc698a"
+              LastKnownName="Control player's snake"
+              LastKnownLocation="SnakeUnmessModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6db14a7b-e561-4055-b360-50f15d934049"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="710fa764-2b12-4c1a-995e-f634ce4b1cb9"
+                  name="Control player's snake"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f12f40be-8021-4105-b98c-da3192f4411d"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Quit game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f042f817-8374-4ee9-9eb1-063aa216519d"
+              LastKnownName="Quit game"
+              LastKnownLocation="SnakeUnmessModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="063a8168-456c-4b05-ad1c-16075cc71aad"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f70b132-ee05-43ce-b336-bfe50aa3a784"
+                  name="Quit game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="80c923b7-705b-4bf2-bfc5-97432cf90fc8"
+        name="Game"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e2ff3765-9c82-43d5-846f-4ea5eaa082d9"
+        name="Start game"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="80c923b7-705b-4bf2-bfc5-97432cf90fc8"
+            LastKnownName="Game"
+            LastKnownLocation="SnakeUnmessModels.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e72cf377-119a-4b3e-83a8-83b15f1ae647"
+        name="Pause game"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="80c923b7-705b-4bf2-bfc5-97432cf90fc8"
+            LastKnownName="Game"
+            LastKnownLocation="SnakeUnmessModels.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bb9bbbce-7d78-477f-b691-03f6eacc698a"
+        name="Control player's snake"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="80c923b7-705b-4bf2-bfc5-97432cf90fc8"
+            LastKnownName="Game"
+            LastKnownLocation="SnakeUnmessModels.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f042f817-8374-4ee9-9eb1-063aa216519d"
+        name="Quit game"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="80c923b7-705b-4bf2-bfc5-97432cf90fc8"
+            LastKnownName="Game"
+            LastKnownLocation="SnakeUnmessModels.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

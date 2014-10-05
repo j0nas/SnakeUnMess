@@ -51,7 +51,6 @@
     <Compile Include="Elements\Snake\Direction.cs" />
     <Compile Include="Elements\FoodItem\FoodItem.cs" />
     <Compile Include="Elements\GameElementObject.cs" />
-    <Compile Include="FreeGridThing.cs" />
     <Compile Include="GameHandler.cs" />
     <Compile Include="Console\ConsoleGameWindow.cs" />
     <Compile Include="Global\GlobalUtilities.cs" />
