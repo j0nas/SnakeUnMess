@@ -20,7 +20,7 @@
         {
             get
             {
-                var key = Console.ReadKey(false).Key;
+                var key = Console.ReadKey(true).Key;
 
                 switch (key)
                 {

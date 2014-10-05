@@ -1,4 +1,4 @@
-﻿namespace SnakeUnmess
+﻿namespace SnakeUnMess
 {
     using System;
     using System.Diagnostics;

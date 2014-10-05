@@ -1,6 +1,6 @@
 ﻿namespace SnakeUnMess
 {
-    using SnakeUnmess;
+    using SnakeUnMess;
 
     using SnakeUnMess.Console;
 
