@@ -71,13 +71,33 @@
         {
             var scoreMessage = "Score: " + score;
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.SetCursorPosition((Console.WindowWidth / 2) - (GameOverMessage.Length / 2), Console.WindowHeight / 2);
-            Console.Write(GameOverMessage);
-            Console.SetCursorPosition((Console.WindowWidth / 2) - (scoreMessage.Length / 2), (Console.WindowHeight / 2) + 1);
-            Console.Write(scoreMessage);
-           
+            WriteMessageInConsoleCentre(GameOverMessage);
+            WriteMessageInConsoleCentre(scoreMessage, 1);
+
             // Not clearing the board so player can take a screenshot if s/he wants to and brag to all his/her friends.
             Console.ReadKey(true);
+        }
+
+        public void DrawStartScreen()
+        {
+            var offset = -3;
+            WriteMessageInConsoleCentre("THE ANACONDA IS LOOSE!", offset++);
+            WriteMessageInConsoleCentre("Press any key to start!", offset++);
+
+            offset = 1;
+            WriteMessageInConsoleCentre("A shitty game", offset++);
+            WriteMessageInConsoleCentre("(with an amazing project structure)", offset++);
+            WriteMessageInConsoleCentre("by", offset++);
+            offset++;
+            WriteMessageInConsoleCentre("Martin Øy - oymar13", offset++);
+            WriteMessageInConsoleCentre("Jonas Jensen - jenjon13", offset++);
+            Console.ReadKey(true);
+        }
+
+        private void WriteMessageInConsoleCentre(string message, int offsetY = 0)
+        {
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (message.Length / 2), (Console.WindowHeight / 2) + offsetY);
+            Console.Write(message);
         }
     }
 }

@@ -43,6 +43,8 @@
             var frameTimer = new Stopwatch();
             frameTimer.Start();
 
+            this.ShowStartScreen();
+
             // Game mainloop
             while (!gameOver)
             {
@@ -62,6 +64,11 @@
             }
 
             gameClient.GameWindow.DrawGameOver(player.Score);
+        }
+
+        private void ShowStartScreen()
+        {
+            gameClient.GameWindow.DrawStartScreen();
         }
 
         private bool SnakeMovedLegally()
