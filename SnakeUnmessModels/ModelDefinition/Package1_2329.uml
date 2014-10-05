@@ -77,6 +77,47 @@
               LastKnownLocation="Package1_1722.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="d32e373a-c82f-4346-a25f-3641821ca35c"
+            isDerived="false"
+            sourceEndRoleName="FoodItem"
+            targetEndRoleName="GameHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="477b0386-3670-404e-b380-2170c48e709b"
+              LastKnownName="GameHandler"
+              LastKnownLocation="Package_1444.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a40d58e-de1a-4a9a-972c-7d7484b9f1b6"
+                  name="FoodItem"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4b644509-e1c2-47a1-90cb-8b18764a84f5"
+                  name="GameHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="02934b37-669d-4063-9e06-a65e9aa7b97f"

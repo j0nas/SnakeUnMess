@@ -1491,6 +1491,24 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="1939543d-95c8-424f-b3c1-4bbde52ecfa9" />
+        <targetEnds>
+          <association Id="c0339a6b-4f18-4e0d-8796-df1e560eae9b" isDerived="false" sourceEndRoleName="Direction" targetEndRoleName="GameHandler" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e749908a-33c5-4e07-97f4-e577f081dd10" LastKnownName="GameHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="697a7c09-ca87-4e94-8934-9e35750270d1" name="Direction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="529cc617-e5a4-41a9-ad16-ebd7d176f583" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39764a97-db8d-4a99-a4be-759c92ac7e74" name="GameHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="856a1eb8-0994-49e3-b280-bfb95223153b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9409a856-bbc4-4f31-8176-beda1e08be5c" />
+          </association>
+        </targetEnds>
         <ownedLiterals>
           <enumerationLiteral Id="086f929f-8ed4-4de5-b4a8-dc8790577720" name="Up">
             <referencesInternal>
@@ -1578,6 +1596,24 @@
             <elementDefinition Id="51b81692-17f7-4ccf-9ad3-d1568dfd0fe5" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="4b12b8fe-77d4-41fc-ab61-5cf5ed8fb53d" isDerived="false" sourceEndRoleName="FoodItem" targetEndRoleName="GameHandler" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e749908a-33c5-4e07-97f4-e577f081dd10" LastKnownName="GameHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1ea54bab-1780-4dd6-b777-bfa9961f01b1" name="FoodItem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0a40d58e-de1a-4a9a-972c-7d7484b9f1b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="88054008-185e-4536-9887-e39b5ec96428" name="GameHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4b644509-e1c2-47a1-90cb-8b18764a84f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d32e373a-c82f-4346-a25f-3641821ca35c" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="e128d5b5-d921-4745-900a-119ccccc71fa" name="ScoreValue" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -1719,106 +1755,6 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="083f019b-4242-4fd9-90cf-1eed76326b02" name="FreeGridThing" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <referencesInternal>
-          <reference Id="447ea71d-d977-46de-ae9e-32e554ac3e95" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess Type%3DFreeGridThing" tag="ViewCode">
-            <elementDefinition Id="61e51d90-f866-4003-8edf-4e77fb3a6019" />
-          </reference>
-        </referencesInternal>
-        <appliedStereotypesInternal>
-          <stereotypeInstance Id="10d228c5-e4dd-416c-a87a-6ac0add95610" name="class" profile="CSharpProfile">
-            <elementDefinition Id="a571380d-3cbe-4630-b70d-84dabcc63fd2" />
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="98400b04-2855-4a86-a289-754e7d5af6a0">
-                <propertyInstance Id="e5a52af6-d43e-4046-ac6a-c00be3370499" name="ClrAttributes">
-                  <elementDefinition Id="df04b623-d453-4390-b446-6516c5c1ea48" />
-                </propertyInstance>
-                <elementDefinition Id="acfd51a6-fb83-4432-b5c8-e60903af9480" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="af42b04f-daf8-4524-a57c-f324e11884ba">
-                <propertyInstance Id="f4ad4a36-7098-492e-99bb-47e259f682bf" name="IsPartial" value="false">
-                  <elementDefinition Id="0ec7526b-b224-474d-a19e-51c92bf98580" />
-                </propertyInstance>
-                <elementDefinition Id="dd9d81ab-aa49-401e-afc6-c6ed2d0aa6f6" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="a40930b5-0937-4797-82c6-004a5ce4ca60">
-                <propertyInstance Id="a0d2aeb0-d9f0-48e1-9307-78966c8f1e0a" name="IsStatic" value="False">
-                  <elementDefinition Id="6b4fcf8f-5ad3-47f5-90a4-d0eb95c29147" />
-                </propertyInstance>
-                <elementDefinition Id="748d1994-b21b-49bb-a881-1d7c896abb73" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="a239d33f-293f-4617-80bb-68f453c2fe94">
-                <propertyInstance Id="fb65cf80-b5e9-4c3f-8681-a7fbd8826abf" name="IsUnsafe" value="false">
-                  <elementDefinition Id="dd845992-72d7-43d8-abcb-d42463bfafad" />
-                </propertyInstance>
-                <elementDefinition Id="a09b6d3d-96ab-42ba-89c6-b604a2bf613c" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="37b7a422-c000-4059-a6d9-56e900ca6269">
-                <propertyInstance Id="298ab1b5-1ab3-466d-9d9d-4b5d9e2057da" name="PackageVisibility" value="internal">
-                  <elementDefinition Id="f4ea61e7-3366-4f3a-a42e-f2e4b2715974" />
-                </propertyInstance>
-                <elementDefinition Id="36f97749-59f5-4a2b-85b1-9d0087e19aa8" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
-        <elementDefinition Id="bcec1f61-e0e1-40c9-b3d2-e153fc411833" />
-        <ownedOperationsInternal>
-          <operation Id="34b03b37-1fe8-432f-aefe-b6dffa01dae3" name="FreeGridThing" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <referencesInternal>
-              <reference Id="d5242baa-b39a-4c24-8403-3d75a65c7ad2" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJonas%2Fdocuments%2Fvisual studio 2013%2FProjects%2FSnakeUnMess%2FSnakeUnMess%2Fbin%2FDebug%2FSnakeUnMess.exe&quot; Namespace%3DSnakeUnMess Type%3DFreeGridThing Member%3D.ctor" tag="ViewCode">
-                <elementDefinition Id="aa870485-5a25-4264-ae3a-8164cf1f7f25" />
-              </reference>
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="f1e6c390-a159-4869-894f-649d1a71203b" name="method" profile="CSharpProfile">
-                <elementDefinition Id="f22778e1-c63d-41f3-a836-2a7101d89eba" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="9e6799e5-33b0-4c9c-9c70-9435a422c3da">
-                    <propertyInstance Id="da5e0ae9-6e44-4c1b-ad9a-96ace920e29d" name="ClrAttributes">
-                      <elementDefinition Id="ba1c98be-8958-4781-be0a-de032191784f" />
-                    </propertyInstance>
-                    <elementDefinition Id="a5ce1d8c-6221-4cfe-8acf-3a936bbd027e" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="b05bd0fe-29ca-4977-931b-61e76f99406a">
-                    <propertyInstance Id="b15e112d-7e89-480a-aed6-835322c288ca" name="IsPartial" value="false">
-                      <elementDefinition Id="5eeafb4b-4c99-49aa-b8d8-9a0910ff5ab7" />
-                    </propertyInstance>
-                    <elementDefinition Id="ace742a2-ad6f-42ab-a2ed-7e29dc91c7a0" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="2ec4ebdd-688d-4a6d-9707-a14e4835208d">
-                    <propertyInstance Id="2f72166f-0a73-4c2d-9bbe-b52af63126a8" name="IsUnsafe" value="false">
-                      <elementDefinition Id="2a86b887-cba2-410b-aad3-4c6bdf102a42" />
-                    </propertyInstance>
-                    <elementDefinition Id="261e2cb9-57f1-440b-ae17-93f4477c0eab" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="6d09be22-f894-4f43-9356-c164c93b138a">
-                    <propertyInstance Id="2257c37a-abf8-4079-8253-c5b749b3676f" name="Inheritance" value="none">
-                      <elementDefinition Id="3342f6bd-a76c-47f8-9110-3c5954936ef8" />
-                    </propertyInstance>
-                    <elementDefinition Id="d36b8d47-3131-41b6-b0a9-e0f836f509e2" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="7a9abe24-fd4e-4ddc-a1fe-b2bbb63899d6">
-                    <propertyInstance Id="0662c337-ba81-444a-8ca3-a2d312f9f3f9" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="ac971df3-525c-4381-aa72-23af4a3bad1b" />
-                    </propertyInstance>
-                    <elementDefinition Id="af9783bf-5732-4e0f-b192-120e8a723b80" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="66a59181-0f02-4ffa-9965-60872609930f">
-                    <propertyInstance Id="de53d22c-8d1f-49e9-95d5-5ddd4ea2b5ca" name="params" value="false">
-                      <elementDefinition Id="6118e710-c0d9-4b91-b40d-280a8887df95" />
-                    </propertyInstance>
-                    <elementDefinition Id="7da115a7-6628-4e67-95e6-ce992b23ade7" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="fea465a1-c763-4886-8ad0-348473b5b477" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -2030,6 +1966,40 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="477b0386-3670-404e-b380-2170c48e709b" />
+        <targetEnds>
+          <association Id="6fb8329f-0b1c-4211-be90-126bdbda681a" isDerived="false" sourceEndRoleName="GameHandler" targetEndRoleName="Player" isLeaf="false" isAbstract="false">
+            <classMoniker Id="52f891db-dcc2-4bc7-9aaf-499bfba6b1d2" LastKnownName="Player" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b2e2090-2fbd-4816-ac7f-5db580d389b5" name="GameHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="329d7ffb-395d-4ffc-b48f-b4a2b9fd67be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8cd1e0ef-05be-4827-8fc8-6f9e7090656c" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ee78636-0abe-4037-ac71-fa81e0812026" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c331dcef-68a4-4306-b99b-90b008ce9534" />
+          </association>
+          <association Id="889fb633-0f08-4679-bfdf-a4e5c7d51f80" isDerived="false" sourceEndRoleName="GameHandler" targetEndRoleName="Application" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5ba30a2e-565c-47c0-aeaf-e4adfcd5cc3b" LastKnownName="Application" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ffea12b-02f0-466b-9992-6f8480e775ea" name="GameHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="012b37b1-5289-43f1-b97c-9a8bed825487" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="80321456-a997-4dc3-af46-484205528f9c" name="Application" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="90798aba-74a2-4f16-99c4-dfd5a163e019" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2ff75221-1c9c-48ed-9190-ae7eef53c9c5" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="b6fbe683-69d9-42d5-8e5c-f7f005d2d696" name="FramesPerSecond" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -4676,6 +4646,24 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="3a4ff19f-172b-48c6-b03c-5844b2b4efd7" />
+        <targetEnds>
+          <association Id="1c45f788-289b-41dc-b55f-05762306a675" isDerived="false" sourceEndRoleName="Snake" targetEndRoleName="Direction" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="6c333020-41c3-4f53-9201-b2b51483c67e" LastKnownName="Direction" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ba973edb-d6a2-45d6-8936-7fc6d5b9eeb3" name="Snake" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c7cc4fed-24b4-4bbf-8759-d4c5c7fbbba5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="73d14dc1-fd38-4fc1-819c-6c11c043b894" name="Direction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="95be6cb9-5ab8-4ac9-aeaa-260822947dd3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1d69eee1-5793-43d7-bc14-e2f51a98b893" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="8440466b-a8df-4dd3-94a8-84732bd6a786" name="HeadPoint" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>

@@ -52,6 +52,47 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="9409a856-bbc4-4f31-8176-beda1e08be5c"
+            isDerived="false"
+            sourceEndRoleName="Direction"
+            targetEndRoleName="GameHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="477b0386-3670-404e-b380-2170c48e709b"
+              LastKnownName="GameHandler"
+              LastKnownLocation="Package_1444.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="529cc617-e5a4-41a9-ad16-ebd7d176f583"
+                  name="Direction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="856a1eb8-0994-49e3-b280-bfb95223153b"
+                  name="GameHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedLiterals>
           <enumerationLiteral
             Id="05f76631-e726-4c04-a4f6-e6e7dafdf826"
@@ -282,6 +323,45 @@
                       value="1" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1d69eee1-5793-43d7-bc14-e2f51a98b893"
+            isDerived="false"
+            sourceEndRoleName="Snake"
+            targetEndRoleName="Direction"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="1939543d-95c8-424f-b3c1-4bbde52ecfa9"
+              LastKnownName="Direction"
+              LastKnownLocation="Package5_1722.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7cc4fed-24b4-4bbf-8759-d4c5c7fbbba5"
+                  name="Snake"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="95be6cb9-5ab8-4ac9-aeaa-260822947dd3"
+                  name="Direction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

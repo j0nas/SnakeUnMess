@@ -24,19 +24,19 @@
 
                 switch (key)
                 {
-                    case ConsoleKey.W:
+                    // case ConsoleKey.W:
                     case ConsoleKey.UpArrow:
                     case ConsoleKey.NumPad8:
                         return PlayerRequest.Up;
-                    case ConsoleKey.A:
+                    // case ConsoleKey.A:
                     case ConsoleKey.LeftArrow:
                     case ConsoleKey.NumPad4:
                         return PlayerRequest.Left;
-                    case ConsoleKey.S:
+                    // case ConsoleKey.S:
                     case ConsoleKey.DownArrow:
                     case ConsoleKey.NumPad5:
                         return PlayerRequest.Down;
-                    case ConsoleKey.D:
+                    // case ConsoleKey.D:
                     case ConsoleKey.RightArrow:
                     case ConsoleKey.NumPad6:
                         return PlayerRequest.Right;

@@ -75,6 +75,86 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="c331dcef-68a4-4306-b99b-90b008ce9534"
+            isDerived="false"
+            sourceEndRoleName="GameHandler"
+            targetEndRoleName="Player"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7b5db741-1795-451a-9693-dc25bb71d0af"
+              LastKnownName="Player"
+              LastKnownLocation="Package4_1722.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="329d7ffb-395d-4ffc-b48f-b4a2b9fd67be"
+                  name="GameHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ee78636-0abe-4037-ac71-fa81e0812026"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2ff75221-1c9c-48ed-9190-ae7eef53c9c5"
+            isDerived="false"
+            sourceEndRoleName="GameHandler"
+            targetEndRoleName="Application"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2b36743f-1956-4c58-a511-315394a84256"
+              LastKnownName="Application"
+              LastKnownLocation="Package_1722.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="012b37b1-5289-43f1-b97c-9a8bed825487"
+                  name="GameHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90798aba-74a2-4f16-99c4-dfd5a163e019"
+                  name="Application"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="d758cb0d-4009-4679-a628-851d345f5e6c"

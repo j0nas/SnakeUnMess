@@ -83,7 +83,7 @@
         {
             if (FoodHasBeenEaten())
             {
-                player.Scored(foodItem.ScoreValue);
+                player.ScoreChange(foodItem.ScoreValue);
 
                 // If no more place to spawn food ..
                 if (SnakeFillsScreen())
@@ -156,7 +156,6 @@
 
         private bool FoodHasBeenEaten()
         {
-            // If player's snake's headCoord collides with foodItem.. 
             return player.Snake.HeadPoint.Equals(foodItem.Position);
         }
 
