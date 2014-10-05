@@ -85,7 +85,7 @@
             WriteMessageInConsoleCentre("Press any key to start!", offset++);
 
             offset = 1;
-            WriteMessageInConsoleCentre("A shitty game", offset++);
+            WriteMessageInConsoleCentre("An arcade clasic", offset++);
             WriteMessageInConsoleCentre("(with an amazing project structure)", offset++);
             WriteMessageInConsoleCentre("by", offset++);
             offset++;
